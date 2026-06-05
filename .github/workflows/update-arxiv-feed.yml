@@ -1,0 +1,38 @@
+name: Update arXiv feed
+
+on:
+  # 02:05 UTC = 11:05 JST. GitHub ActionsのscheduleはUTCです。
+  schedule:
+    - cron: '5 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Fetch arXiv papers
+        run: python scripts/fetch_arxiv.py
+
+      - name: Commit updated feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/papers.json public/feed_status.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update arXiv feed"
+            git push
+          fi
