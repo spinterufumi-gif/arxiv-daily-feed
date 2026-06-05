@@ -1,4 +1,10 @@
 {
-  "ok": true,
-  "message": "sample. Run GitHub Actions to update."
+  "ok": false,
+  "skipped": false,
+  "rateLimited": true,
+  "startedAt": "2026-06-05T09:15:57.795147Z",
+  "finishedAt": "2026-06-05T09:16:49.077275Z",
+  "previousFeedExists": true,
+  "message": "HTTP 503: arXiv rate-limited or temporarily refused the request; Retry-After=0",
+  "suggestion": "arXiv returned 429/503. Do not re-run repeatedly. Wait at least several hours, preferably until the next scheduled run."
 }
