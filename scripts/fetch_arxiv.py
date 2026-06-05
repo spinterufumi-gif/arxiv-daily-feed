@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """
 Fetch a daily arXiv feed once, convert Atom XML to JSON, and save it for the iPhone app.
-This script intentionally makes only one arXiv API request per run.
+
+This version is intentionally conservative:
+- one arXiv API request per successful run
+- no failure of the whole GitHub Actions job on HTTP 429
+- existing public/papers.json is kept when arXiv rate-limits the request
 """
 from __future__ import annotations
 
 import json
+import os
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -28,13 +34,24 @@ CATEGORIES = [
     "nlin.PS",
     "physics.comp-ph",
 ]
-MAX_RESULTS = 100
+MAX_RESULTS = 75
 
 ARXIV_API_URL = "https://export.arxiv.org/api/query"
-USER_AGENT = "ArxivDailyReader/0.5 personal GitHub Actions feed (contact: add-your-email@example.com)"
+CONTACT = os.environ.get("ARXIV_CONTACT", "personal-use-no-contact-set")
+USER_AGENT = f"ArxivDailyReader/0.6 personal GitHub Actions feed ({CONTACT})"
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV = "{http://arxiv.org/schemas/atom}"
+
+
+class ArxivRateLimited(Exception):
+    def __init__(self, status_code: int, retry_after: str | None = None):
+        self.status_code = status_code
+        self.retry_after = retry_after
+        msg = f"HTTP {status_code}: arXiv rate-limited or temporarily refused the request"
+        if retry_after:
+            msg += f"; Retry-After={retry_after}"
+        super().__init__(msg)
 
 
 def utc_now_iso() -> str:
@@ -43,6 +60,11 @@ def utc_now_iso() -> str:
 
 def build_query() -> str:
     return " OR ".join(f"cat:{cat}" for cat in CATEGORIES)
+
+
+def write_status(**kwargs) -> None:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    STATUS_PATH.write_text(json.dumps(kwargs, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def fetch_atom() -> bytes:
@@ -62,8 +84,13 @@ def fetch_atom() -> bytes:
         },
         method="GET",
     )
-    with urllib.request.urlopen(req, timeout=60) as res:
-        return res.read()
+    try:
+        with urllib.request.urlopen(req, timeout=60) as res:
+            return res.read()
+    except urllib.error.HTTPError as exc:
+        if exc.code in (429, 503):
+            raise ArxivRateLimited(exc.code, exc.headers.get("Retry-After")) from exc
+        raise
 
 
 def text_or_none(parent: ET.Element, tag: str) -> str | None:
@@ -74,9 +101,6 @@ def text_or_none(parent: ET.Element, tag: str) -> str | None:
 
 
 def normalize_arxiv_id(entry_id: str) -> str:
-    # entry_id examples:
-    #   http://arxiv.org/abs/2401.01234v1
-    #   https://arxiv.org/abs/cond-mat/9901001v2
     arxiv_id = entry_id.rstrip("/").split("/abs/")[-1]
     return arxiv_id
 
@@ -143,8 +167,8 @@ def main() -> int:
     started_at = utc_now_iso()
 
     try:
-        # The workflow calls arXiv once per run. This small delay helps if the job is manually re-run.
-        time.sleep(3)
+        # A small delay helps when a manual re-run is triggered immediately after another run.
+        time.sleep(5)
         atom = fetch_atom()
         papers = parse_atom(atom)
         payload = {
@@ -155,35 +179,41 @@ def main() -> int:
             "papers": papers,
         }
         OUTPUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-        STATUS_PATH.write_text(
-            json.dumps(
-                {
-                    "ok": True,
-                    "startedAt": started_at,
-                    "finishedAt": utc_now_iso(),
-                    "paperCount": len(papers),
-                    "message": "updated",
-                },
-                ensure_ascii=False,
-                indent=2,
-            ),
-            encoding="utf-8",
+        write_status(
+            ok=True,
+            rateLimited=False,
+            startedAt=started_at,
+            finishedAt=utc_now_iso(),
+            paperCount=len(papers),
+            message="updated",
         )
         print(f"Wrote {OUTPUT_PATH} with {len(papers)} papers")
         return 0
+
+    except ArxivRateLimited as exc:
+        # Important: do not delete or overwrite papers.json here.
+        # The iPhone app can continue using the previous successful feed.
+        previous_feed_exists = OUTPUT_PATH.exists()
+        write_status(
+            ok=False,
+            rateLimited=True,
+            startedAt=started_at,
+            finishedAt=utc_now_iso(),
+            previousFeedExists=previous_feed_exists,
+            message=str(exc),
+            suggestion="arXiv returned 429/503. Do not re-run repeatedly. Wait at least 30-60 minutes, preferably until the next scheduled run.",
+        )
+        print(f"Rate limited: {exc}", file=sys.stderr)
+        print("Kept existing public/papers.json. Exiting with success so the workflow can commit feed_status.json.")
+        return 0
+
     except Exception as exc:
-        STATUS_PATH.write_text(
-            json.dumps(
-                {
-                    "ok": False,
-                    "startedAt": started_at,
-                    "finishedAt": utc_now_iso(),
-                    "message": str(exc),
-                },
-                ensure_ascii=False,
-                indent=2,
-            ),
-            encoding="utf-8",
+        write_status(
+            ok=False,
+            rateLimited=False,
+            startedAt=started_at,
+            finishedAt=utc_now_iso(),
+            message=str(exc),
         )
         print(f"Failed: {exc}", file=sys.stderr)
         return 1

@@ -9,6 +9,11 @@ on:
 permissions:
   contents: write
 
+# Prevent accidental overlapping runs when the button is clicked repeatedly.
+concurrency:
+  group: arxiv-feed-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -23,6 +28,9 @@ jobs:
           python-version: '3.x'
 
       - name: Fetch arXiv papers
+        env:
+          # Optional. You can replace this with your contact address, but do not put API keys here.
+          ARXIV_CONTACT: personal-use
         run: python scripts/fetch_arxiv.py
 
       - name: Commit updated feed
