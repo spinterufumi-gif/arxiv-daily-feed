@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """
-Fetch a daily arXiv feed once, convert Atom XML to JSON, and save it for the iPhone app.
+Fetch a daily arXiv feed, convert Atom XML to JSON, and save it for the iPhone app.
 
 This version is intentionally conservative:
 - one arXiv API request per successful run
-- no failure of the whole GitHub Actions job on HTTP 429
-- existing public/papers.json is kept when arXiv rate-limits the request
+- optional cooldown so repeated manual runs do not hammer arXiv
+- retries with long timeouts for temporary read timeouts
+- existing public/papers.json is kept on HTTP 429/503 or timeouts
 """
 from __future__ import annotations
 
 import json
 import os
+import socket
 import sys
 import time
 import urllib.error
@@ -34,11 +36,17 @@ CATEGORIES = [
     "nlin.PS",
     "physics.comp-ph",
 ]
-MAX_RESULTS = 75
+MAX_RESULTS = int(os.environ.get("ARXIV_MAX_RESULTS", "50"))
 
 ARXIV_API_URL = "https://export.arxiv.org/api/query"
 CONTACT = os.environ.get("ARXIV_CONTACT", "personal-use-no-contact-set")
-USER_AGENT = f"ArxivDailyReader/0.6 personal GitHub Actions feed ({CONTACT})"
+USER_AGENT = f"ArxivDailyReader/0.7 personal GitHub Actions feed ({CONTACT})"
+
+# Network safety settings.
+HTTP_TIMEOUT_SECONDS = int(os.environ.get("ARXIV_HTTP_TIMEOUT_SECONDS", "180"))
+RETRY_DELAYS_SECONDS = [0, 90, 300]
+MIN_FETCH_INTERVAL_SECONDS = int(os.environ.get("ARXIV_MIN_FETCH_INTERVAL_SECONDS", str(6 * 60 * 60)))
+FORCE_FETCH = os.environ.get("FORCE_FETCH", "false").lower() in {"1", "true", "yes"}
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV = "{http://arxiv.org/schemas/atom}"
@@ -54,8 +62,25 @@ class ArxivRateLimited(Exception):
         super().__init__(msg)
 
 
+class ArxivTemporaryFailure(Exception):
+    pass
+
+
+def utc_now() -> datetime:
+    return datetime.now(timezone.utc)
+
+
 def utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    return utc_now().isoformat().replace("+00:00", "Z")
+
+
+def parse_iso_utc(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except Exception:
+        return None
 
 
 def build_query() -> str:
@@ -67,7 +92,32 @@ def write_status(**kwargs) -> None:
     STATUS_PATH.write_text(json.dumps(kwargs, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def fetch_atom() -> bytes:
+def read_previous_status() -> dict:
+    if not STATUS_PATH.exists():
+        return {}
+    try:
+        return json.loads(STATUS_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def should_skip_for_cooldown() -> tuple[bool, str | None]:
+    if FORCE_FETCH or not OUTPUT_PATH.exists():
+        return False, None
+    status = read_previous_status()
+    previous_started = parse_iso_utc(status.get("startedAt"))
+    previous_finished = parse_iso_utc(status.get("finishedAt"))
+    last_time = previous_finished or previous_started
+    if last_time is None:
+        return False, None
+    elapsed = (utc_now() - last_time).total_seconds()
+    if elapsed < MIN_FETCH_INTERVAL_SECONDS:
+        remaining_min = int((MIN_FETCH_INTERVAL_SECONDS - elapsed + 59) // 60)
+        return True, f"Skipped to avoid repeated arXiv access. Try again after about {remaining_min} minutes, or use force=true from Run workflow."
+    return False, None
+
+
+def request_once() -> bytes:
     params = {
         "search_query": build_query(),
         "start": "0",
@@ -85,12 +135,31 @@ def fetch_atom() -> bytes:
         method="GET",
     )
     try:
-        with urllib.request.urlopen(req, timeout=60) as res:
+        with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as res:
             return res.read()
     except urllib.error.HTTPError as exc:
         if exc.code in (429, 503):
             raise ArxivRateLimited(exc.code, exc.headers.get("Retry-After")) from exc
         raise
+    except (TimeoutError, socket.timeout, urllib.error.URLError) as exc:
+        raise ArxivTemporaryFailure(str(exc)) from exc
+
+
+def fetch_atom() -> bytes:
+    last_error: Exception | None = None
+    for attempt, delay in enumerate(RETRY_DELAYS_SECONDS, start=1):
+        if delay:
+            print(f"Waiting {delay} seconds before retry {attempt}...")
+            time.sleep(delay)
+        try:
+            print(f"Fetching arXiv feed, attempt {attempt}, max_results={MAX_RESULTS}, timeout={HTTP_TIMEOUT_SECONDS}s")
+            return request_once()
+        except ArxivRateLimited:
+            raise
+        except ArxivTemporaryFailure as exc:
+            last_error = exc
+            print(f"Temporary arXiv/network failure on attempt {attempt}: {exc}", file=sys.stderr)
+    raise ArxivTemporaryFailure(f"The read operation timed out or failed after {len(RETRY_DELAYS_SECONDS)} attempts: {last_error}")
 
 
 def text_or_none(parent: ET.Element, tag: str) -> str | None:
@@ -101,8 +170,7 @@ def text_or_none(parent: ET.Element, tag: str) -> str | None:
 
 
 def normalize_arxiv_id(entry_id: str) -> str:
-    arxiv_id = entry_id.rstrip("/").split("/abs/")[-1]
-    return arxiv_id
+    return entry_id.rstrip("/").split("/abs/")[-1]
 
 
 def parse_atom(data: bytes) -> list[dict]:
@@ -166,6 +234,20 @@ def main() -> int:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     started_at = utc_now_iso()
 
+    skip, reason = should_skip_for_cooldown()
+    if skip:
+        write_status(
+            ok=True,
+            skipped=True,
+            rateLimited=False,
+            startedAt=started_at,
+            finishedAt=utc_now_iso(),
+            previousFeedExists=OUTPUT_PATH.exists(),
+            message=reason,
+        )
+        print(reason)
+        return 0
+
     try:
         # A small delay helps when a manual re-run is triggered immediately after another run.
         time.sleep(5)
@@ -181,6 +263,7 @@ def main() -> int:
         OUTPUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         write_status(
             ok=True,
+            skipped=False,
             rateLimited=False,
             startedAt=started_at,
             finishedAt=utc_now_iso(),
@@ -191,25 +274,42 @@ def main() -> int:
         return 0
 
     except ArxivRateLimited as exc:
-        # Important: do not delete or overwrite papers.json here.
-        # The iPhone app can continue using the previous successful feed.
         previous_feed_exists = OUTPUT_PATH.exists()
         write_status(
             ok=False,
+            skipped=False,
             rateLimited=True,
             startedAt=started_at,
             finishedAt=utc_now_iso(),
             previousFeedExists=previous_feed_exists,
             message=str(exc),
-            suggestion="arXiv returned 429/503. Do not re-run repeatedly. Wait at least 30-60 minutes, preferably until the next scheduled run.",
+            suggestion="arXiv returned 429/503. Do not re-run repeatedly. Wait at least several hours, preferably until the next scheduled run.",
         )
         print(f"Rate limited: {exc}", file=sys.stderr)
+        print("Kept existing public/papers.json. Exiting with success so the workflow can commit feed_status.json.")
+        return 0
+
+    except ArxivTemporaryFailure as exc:
+        previous_feed_exists = OUTPUT_PATH.exists()
+        write_status(
+            ok=False,
+            skipped=False,
+            rateLimited=False,
+            timedOut=True,
+            startedAt=started_at,
+            finishedAt=utc_now_iso(),
+            previousFeedExists=previous_feed_exists,
+            message=str(exc),
+            suggestion="arXiv or the network did not respond in time. Existing papers.json was kept. Avoid repeated manual re-runs; try later or use the next scheduled run.",
+        )
+        print(f"Temporary failure: {exc}", file=sys.stderr)
         print("Kept existing public/papers.json. Exiting with success so the workflow can commit feed_status.json.")
         return 0
 
     except Exception as exc:
         write_status(
             ok=False,
+            skipped=False,
             rateLimited=False,
             startedAt=started_at,
             finishedAt=utc_now_iso(),
