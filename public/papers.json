@@ -1,1035 +1,1116 @@
 {
-  "generatedAt": "2026-09-10T07:15:36.712831Z",
+  "generatedAt": "2026-09-11T07:14:20.660715Z",
   "source": "arXiv API via GitHub Actions",
   "query": "cat:cond-mat.mes-hall OR cat:cond-mat.mtrl-sci OR cat:cond-mat.str-el OR cat:cond-mat.supr-con OR cat:cond-mat.stat-mech OR cat:nlin.PS OR cat:physics.comp-ph",
   "maxResults": 50,
   "papers": [
     {
-      "arxivID": "2609.10541v1",
-      "title": "Symplectic Hopf Insulator: Delicate Topology in Bosonic Bogoliubov-de Gennes Systems",
+      "arxivID": "2609.11930v1",
+      "title": "Hierarchy of Rényi Coherent Information in Stabilizer Codes",
       "authors": [
-        "Isaac Tesfaye",
-        "Giandomenico Palumbo"
+        "Akash Vijay",
+        "Luis Colmenarez",
+        "Jong Yeon Lee"
       ],
-      "summary": "Recent advances in topological phases have highlighted the role of symplectic (Krein-space) topology in the classification of bosonic Bogoliubov-de Gennes (BBdG) systems. In this work, we construct a BBdG realization of Hopf topology, which we dub the symplectic Hopf insulator, starting from a microscopic Bose-Hubbard generalization of the Moore-Ran-Wen model with weak on-site interactions treated within a Bogoliubov approximation. The resulting BBdG system admits a symplectic Hopf invariant, which we show to be integer-quantized for isolated bands. We establish that this topology is intrinsically delicate, requiring exactly two bosonic modes per unit cell, while remaining robust against weak interactions over a range of mass parameters. Upon terminating the three-dimensional insulator at a boundary, we find topologically protected in-gap surface states at finite excitation energy, whose protection is itself delicate. Our results establish the symplectic Hopf insulator as a robust yet delicate topological phase in weakly interacting bosonic systems lying beyond the tenfold-way classification.",
-      "published": "2026-09-09T17:59:46Z",
-      "updated": "2026-09-09T17:59:46Z",
-      "categories": [
-        "cond-mat.mes-hall",
-        "cond-mat.quant-gas"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10541v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10541v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10519v1",
-      "title": "Optimal Intermediate Hamiltonians for Non-Equilibrium Free Energy Calculations: A Numerical Study of Markov Models",
-      "authors": [
-        "David Beyer",
-        "Helmut Grubmüller"
-      ],
-      "summary": "The Jarzynski relation enables the estimation of equilibrium free energy differences from non-equilibrium, finite-time switching simulations. These estimates usually converge poorly because rare trajectories dominate the exponential work average. Here, we numerically determined and explored the sequence of intermediate Hamiltonians connecting initial and final states that minimize the mean squared error (MSE) of the Jarzynski estimator and thereby enhance convergence. For discrete-time Markov models, an exact tilted-master-equation representation of the MSE in the large-sample limit, combined with automatic differentiation, enables efficient gradient-based minimization over all intermediate energies. We applied our approach to three model systems of increasing complexity: a two-state model, a double-well potential, and a shifted potential well. In all three systems, the optimal intermediate Hamiltonians jump at the initial and final times. Extensive Monte Carlo simulations show that optimal intermediates can reduce the MSE by more than an order of magnitude compared with linear and logarithmic interpolation, most strongly for large changes in the energy landscape. Remarkably, they need not dissipate less work than intermediates yielding larger errors. Our results suggest heuristics for more efficient non-equilibrium free energy calculations of realistic molecular systems: optimal intermediate Hamiltonians jump at the initial and final times; for barrier-crossing problems, the barrier should be lowered rapidly and raised again later; and minimizing dissipation does not guarantee faster convergence.",
-      "published": "2026-09-09T17:51:12Z",
-      "updated": "2026-09-09T17:51:12Z",
-      "categories": [
-        "cond-mat.stat-mech",
-        "cond-mat.soft"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10519v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10519v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10511v1",
-      "title": "Hydrodynamic magnetotransport in a GaAs Corbino geometry",
-      "authors": [
-        "A. D. Levin",
-        "A. S. Jaroshevich",
-        "Z. D. Kvon",
-        "V. A. Chitta",
-        "M. S. Aksenov",
-        "D. V. Dmitriev",
-        "A. K. Bakarov",
-        "G. M. Gusev"
-      ],
-      "summary": "We report the observation of positive magnetoresistance in high-mobility GaAs Corbino devices. Over a broad intermediate-temperature range, the resistance exhibits a quadratic dependence on perpendicular magnetic field. We analyze the data within hydrodynamic theories of magnetotransport in the Corbino geometry, which describe the crossover between the diffusive and viscous regimes, including finite-slip boundary conditions appropriate for current-penetrable contacts. The extracted relaxation rates are consistent with an approximately $T^2$ temperature dependence of the electron-electron scattering contribution. The extracted viscous relaxation parameters are consistent with those obtained from Hall-bar measurements. Comparison with theory indicates that the observed magnetoresistance is predominantly governed by the bulk hydrodynamic response, while finite slip modifies the Stokes--Ohm crossover quantitatively and the field-dependent boundary voltage provides a separate correction. These results show that Corbino magnetotransport can serve as a complementary bulk-sensitive probe of viscous electron flow.",
-      "published": "2026-09-09T17:45:59Z",
-      "updated": "2026-09-09T17:45:59Z",
-      "categories": [
-        "cond-mat.mes-hall"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10511v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10511v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10510v1",
-      "title": "Phase transitions in first-detection statistics of monitored long-range quantum walks",
-      "authors": [
-        "Sayan Roy",
-        "Shamik Gupta",
-        "Giovanna Morigi",
-        "Gabriele Perfetto"
-      ],
-      "summary": "In a quantum walk, the first-detection return probability (FDRP) characterizes salient features, determining whether the quantum walk is transient or recurrent. We study the FDRP of quantum walks on a chain where the initial site is stroboscopically monitored by a detector and the walker performs long-range hopping between sites. We assume that the hopping strength decays with the distance $d$ as $d^{-α}$ and $α\\geq 0$ and show that the power-law exponent $α$ critically determines the behavior of the FDRP. The value $α=1$ separates recurrent ($α<1$) from transient ($α>1$) quantum walks through a continuous phase transition in the total detection probability. For $α<1$, strong long-range hopping induces localization, resulting in unit total detection probability. Instead, for $α>1$ the long-range walk is transient and the return probability decays algebraically as a function of time as $t^{-β}$. The associated decay exponent $β$ features nonanalytic points as a function of $α$. Such singularities are not exclusively determined by the low-energy spectrum, but are caused by the interference between infrared and ultraviolet energy modes induced by projective measurements, signalling the emergence of critical behavior intrinsic to the non-unitary dynamics. These dynamics are solely controlled by tuning the long-range exponent $α$ and can thus be experimentally probed in atomic and molecular systems.",
-      "published": "2026-09-09T17:45:58Z",
-      "updated": "2026-09-09T17:45:58Z",
+      "summary": "Rényi coherent information, a computable proxy for the von Neumann coherent information, is widely used to study mixed-state phases of matter and decodability transitions in noisy quantum error-correcting codes. However, being a difference of two Rényi entropies, it need not be monotonic in the Rényi index, and lacks the operational meaning of its von Neumann counterpart. Here we address both issues for stabilizer codes. First, for Pauli noise generated by independent Bernoulli events, we prove that the Rényi-$n$ coherent information is nondecreasing in $n \\in \\mathbb{Z}^+$. This follows from a general theorem: if independent random bits are mapped linearly to a fine label $T$ and a coarse label $C$, then the Rényi entropy difference $H_n(C)-H_n(T)$ is nondecreasing in $n$. For stabilizer codes, $T$ is the joint syndrome--logical class and $C$ is the syndrome, and the difference is the Rényi-$n$ coherent information up to a constant. The same theorem covers classical linear codes and independent detector error models. Second, for arbitrary stochastic Pauli noise, we give the Rényi-$n$ coherent information an operational meaning via postselection on matching syndromes between one data block and $n-1$ auxiliary blocks. We determine when this defines a quantum channel and show that saturation of the Rényi-$n$ coherent information is equivalent to asymptotically perfect recovery of the postselected channel. Moreover, the Rényi-$n$ coherent information also upper-bounds the ordinary coherent information achievable after any syndrome-conditioned recovery.",
+      "published": "2026-09-10T17:59:57Z",
+      "updated": "2026-09-10T17:59:57Z",
       "categories": [
         "quant-ph",
-        "cond-mat.other",
         "cond-mat.stat-mech"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10510v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10510v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11930v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11930v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10500v1",
-      "title": "Phonon-Bottleneck-Governed Ultrafast Hot-Carrier Super-Diffusion in Transition Metal Dichalcogenides",
+      "arxivID": "2609.11927v1",
+      "title": "Effective Ionic Valence and Local Magnetic Moment in Kagome Superconductors",
       "authors": [
-        "Yuwei Zhang",
-        "Dongyang Wan",
-        "Tao Zhou",
-        "Hao Wu",
-        "Junpeng Lu",
-        "Zhenhua Ni"
+        "Ruoshi Jiang",
+        "Zi-Jian Lang",
+        "Yuzki Oey",
+        "Andrea Capa Salinas",
+        "Stephen D. Wilson",
+        "Yongwei Li",
+        "Ilya Shipulin",
+        "Yiwen Zhang",
+        "Deng Hu",
+        "Zhiwei Wang",
+        "Hans-Henning Klauss",
+        "Zurab Guguchia",
+        "Vadim Grinenko",
+        "Wei Ku"
       ],
-      "summary": "Two-dimensional transition metal dichalcogenides (TMDCs) are promising for low-power optoelectronics, yet their operational speed is widely considered constrained by low room-temperature mobilities and carrier transit delays. Here, by combining on-chip terahertz optoelectronic sampling with thermally evaporated Ohmic contacts, we eliminate external parasitic delays and directly capture the intrinsic interfacial photoresponse in unencapsulated TMDCs under zero bias. The devices achieve ultrafast relaxation lifetimes of 48.5 ps in MoS2/Au and 14.2 ps in MoSe2/Ag, translating to intrinsic 3-dB bandwidths of 4.4 GHz and 7.5 GHz, respectively. Spatial scanning and bias-dependent measurements show that this response is position-independent and bias-immune, ruling out conventional drift-limited transport and identifying hot-carrier super-diffusion driven by an interfacial electron temperature gradient as the operative mechanism. Furthermore, ultrafast pump-probe spectroscopy reveals that the macroscopic response time is quantitatively synchronized with the microscopic optical-to-acoustic phonon scattering lifetime governed by the intrinsic phonon bottleneck. Our findings establish phonon engineering as a viable paradigm to tailor non-equilibrium optoelectronic dynamics, offering a blueprint for zero-bias, ultrafast, self-powered devices.",
-      "published": "2026-09-09T17:35:55Z",
-      "updated": "2026-09-09T17:35:55Z",
+      "summary": "In order to understand the unexpected similarity and the correlated behavior in kagome superconductor families AV$_3$Sb$_5$ (A = K, Rb, Cs) and ATi$_3$Bi$_5$ (A = Rb, Cs), we investigate the Hartree-scale local electronic structure of these systems. Our result indicates that V and Ti ions are both of 2+ valence such that the corresponding itinerant carrier densities are similar, and the difference in electron count is instead reflected in their quantum fluctuating ionic magnetic moments. However, due to the frustrated lattice geometry of these materials, such local moments are difficult to experimentally observe via standard probes. For verification, we systematically introduce nonmagnetic Sn impurities to locally relieve the geometric frustration and experimentally demonstrate the existence of well-defined local magnetic moments via magnetic susceptibility and muon spin rotation or relaxation ($μ$SR) measurements. All experiments discover a systematic increase of magnetic susceptibility upon increasing nonmagnetic impurity level. Our discovered ionic moments suggest a paradigm shift from the existing itinerant carrier-only picture to one incorporating strong correlation from local ionic spins. The associated interatomic and local-itinerant correlations offer a solid ground for the emergence of the observed rich correlated behavior in this new family of superconducting materials.",
+      "published": "2026-09-10T17:59:26Z",
+      "updated": "2026-09-10T17:59:26Z",
       "categories": [
-        "cond-mat.mes-hall"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10500v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10500v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10486v1",
-      "title": "Faster Quantum Monte Carlo Simulation by Random Compilation",
-      "authors": [
-        "John M. Martyn",
-        "Joshua Lin",
-        "Neill C. Warrington",
-        "Isaac L. Chuang",
-        "Andrew J. Daley"
-      ],
-      "summary": "Quantum Monte Carlo (QMC) algorithms are among the most powerful classical methods for simulating quantum systems, yet their accuracy is often limited by the systematic errors in the approximations used, such as Trotterization. Here we introduce randomly compiled quantum Monte Carlo (RC-QMC) as a general framework that suppresses these systematic errors by averaging over a family of approximations rather than relying on a single fixed one. This strategy is grounded in the concept of randomized compiling from quantum computing, which suppresses errors by sampling over quantum gates, at essentially no additional computational cost. Consequently, our framework achieves a computational advantage over standard QMC methods when estimating a target state to a desired level of accuracy. We illustrate this advantage on two key Monte Carlo algorithms: (1) path integral quantum Monte Carlo for estimating thermal states, and (2) the quantum trajectories method for simulating open system dynamics. In aggregate, these results represent a cross-fertilization of quantum and classical algorithms, are readily generalizable to other QMC methods, and suggest wider applications in classical simulation.",
-      "published": "2026-09-09T17:25:26Z",
-      "updated": "2026-09-09T17:25:26Z",
-      "categories": [
-        "quant-ph",
         "cond-mat.str-el",
-        "hep-lat"
+        "cond-mat.mtrl-sci",
+        "cond-mat.supr-con"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10486v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10486v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11927v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11927v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10476v1",
-      "title": "Invariant domain preservation for hybrid point-value and cell-average discretizations of hyperbolic equations on general meshes",
+      "arxivID": "2609.11926v1",
+      "title": "Quantifying Symmetry Breaking",
       "authors": [
-        "Shengrong Ding",
-        "Shumo Cui",
-        "Remi Abgrall",
-        "Kailiang Wu"
+        "Koji Yamaguchi",
+        "Hiroyasu Tajima"
       ],
-      "summary": "This paper presents a unified invariant-domain-preserving (IDP) framework for hybrid discretizations of hyperbolic conservation laws, including active flux and PAMPA methods, in which cell averages are updated conservatively while cell-boundary point values evolve under a possibly non-conservative operator. The main challenge is to preserve admissibility for these two coupled sets of states under a single local stability condition, without adding evolved degrees of freedom or relying on post-update repairs. For the point-value update, we introduce an admissibility transform based on a barrier--Legendre map for convex admissible interiors described by concave constraints, and prove that the inverse map is globally defined and Lipschitz continuous on the relevant sets. For the conservative cell-average update, we establish a structural obstruction theorem: the single-state continuous physical flux built from admissible boundary traces alone cannot provide a conservative IDP guarantee, for any prescribed CFL number, when internal reconstruction values are uncontrolled. This identifies the missing local control that must be supplied by an additional IDP flux mechanism. To realize this mechanism explicitly, we combine cell average decompositions (CAD), geometric quasilinearization, and local a priori scaling to construct admissible, generally discontinuous trace states before flux evaluation. Under an explicit trace-based CFL condition, with constants determined by local CAD weights and trace-state wave-speed bounds, the coupled hybrid update preserves the prescribed invariant domain. Concrete third-order schemes are developed on triangular, Cartesian, convex quadrilateral, and general convex polygonal meshes. Numerical results demonstrate the designed order of accuracy for smooth solutions and the strict preservation of physical admissibility.",
-      "published": "2026-09-09T17:16:53Z",
-      "updated": "2026-09-09T17:16:53Z",
-      "categories": [
-        "math.NA",
-        "physics.comp-ph"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10476v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10476v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10470v1",
-      "title": "Symmetry structure dependent diagnostic of the Quantum Mpemba Effect",
-      "authors": [
-        "Tamizhselvan S",
-        "Manju C",
-        "Bijay Kumar Agarwalla",
-        "Uma Divakaran"
-      ],
-      "summary": "Understanding symmetry restoration in isolated quantum many-body systems is an important problem in nonequilibrium many-body quantum physics. Recent studies have shown that the quantum Mpemba effect can be characterized through entanglement asymmetry, where states with stronger initial symmetry breaking restore symmetry faster. However, it remains unclear whether conventional energy-based measures, such as the trace distance, capture the same phenomenon. We investigate this question in closed spin-$1/2$ quantum systems with different symmetries by analyzing the dynamics of symmetry-breaking initial states. Combining numerical simulations with an analytical decomposition of the trace distance into symmetry-coherence and residual contributions, we identify the conditions under which trace distance tracks entanglement asymmetry and reproduces the Mpemba--like behavior observed in it. For charge symmetry, the residual contribution is negligible, making the trace distance effectively governed by symmetry-sector coherences. In contrast, for permutation symmetry, a significant residual contribution leads to qualitatively different relaxation dynamics. Our results establish when conventional energy-based diagnostics reliably capture symmetry-restoration dynamics and clarify the distinct physical information encoded by entanglement asymmetry and trace distance.",
-      "published": "2026-09-09T17:12:58Z",
-      "updated": "2026-09-09T17:12:58Z",
+      "summary": "Quantifying properties of quantum states through the limits of their manipulation is a central goal of quantum resource theories. For symmetry breaking, the quantum geometric tensor governs asymptotic pure-state conversion, but a complete characterization for general mixed states has remained elusive. Here we fully resolve this problem for finite-dimensional systems under compact Lie group symmetries in the i.i.d. asymptotic regime. Specifically, we establish a single-letter formula for the optimal conversion rate between arbitrary states, with vanishing trace-distance error, in the resource theory of asymmetry. The rate is determined by a one-parameter family of quantum Fisher information (QFI) matrices that interpolates between the symmetric- and right-logarithmic-derivative QFIs. No state-independent finite subset of this family suffices in general, even for $U(1)$ symmetry, revealing a qualitative distinction from pure-state conversion. Our formula further yields an exact formula for pure-state distillation rates in terms of the generalized quantum geometric tensor, characterizes asymptotically reversible interconversion, and identifies bound asymmetry for quantum clocks. Complementarity among different members of the QFI family also uncovers an activation mechanism for quantum clocks. Our proof relies on two developments of independent interest. First, we extend quantum local asymptotic normality to unitary models with arbitrary rank and spectral degeneracy. Second, we characterize convertibility between quantum Gaussian shift models in terms of the same one-parameter family of QFIs. Together, these results provide an operational characterization of symmetry breaking for general quantum states in the i.i.d. asymptotic regime and reveal how distinct QFI constraints give rise to irreversibility and activation.",
+      "published": "2026-09-10T17:59:15Z",
+      "updated": "2026-09-10T17:59:15Z",
       "categories": [
         "quant-ph",
-        "cond-mat.stat-mech"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10470v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10470v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10463v1",
-      "title": "Protected domains and the cost of cooperation on weighted networks",
-      "authors": [
-        "Abhishek Chowdhury"
-      ],
-      "summary": "A costly inherited trait can spread when its descendants create a favorable local environment. We ask which finite contact structures sustain such a collective competitor and what their advantage costs. Individuals play a donation game, conferring benefit $b$ at cost $c$. Reciprocal weighted contacts determine averaged payoffs and copying recipients, while sources are chosen globally according to payoff. Cooperation is favored when a uniformly introduced cooperator takes over more often than a defector in the complementary experiment. Exact fluctuation response and elimination of fast configurations identify the formation and competition of protected domains as the controlling processes. The sharp weak-selection threshold infima are $b/c=3$ on the four-cycle, $7$ on the five-site path, and $1$ on every fixed path with at least six sites. On the six-site path, a global bound forces near-barrier designs into this domain hierarchy. Polynomial relations among the contact ratios then control unrestricted optimization and imply eventual exact reflection symmetry. Reaching threshold $1+ε$ requires minimum contact contrast $656ε^{-2}[1+O(ε)]$ and neutral absorption time of order $ε^{-1}$. We determine their tradeoff and the associated design tolerance. Finite selection consumes the same margin. Within the controlled small-selection window, the maximal fixation advantage is of order $ε^{5/2}$ when the contrast exceeds its exact minimum by order $ε^{-1}$. Thus an improving invasion threshold can require increasing contact heterogeneity, precision and observation time.",
-      "published": "2026-09-09T17:08:13Z",
-      "updated": "2026-09-09T17:08:13Z",
-      "categories": [
-        "cond-mat.stat-mech",
-        "hep-th",
-        "math-ph",
-        "q-bio.PE"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10463v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10463v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10443v1",
-      "title": "Gauge mean-field theories of the underscreened Kondo lattice",
-      "authors": [
-        "Ewan Scott",
-        "Michal Kwasigroch"
-      ],
-      "summary": "Various mean-field decoupling schemes have been introduced thus far to study the important and challenging problem of the spin-$1$ underscreened Kondo lattice where magnetic order can coexist with Kondo hybridization. We use a single control parameter $N$ and an unbiased variational ansatz to unify and connect the previously proposed decouplings to standard Read-Newns theory, where fluctuations are small in $1/N$. We compute the corrections around the large-$N$ limit. In particular, we make contact with Nozières strong-coupling theory by finding the residual ferromagnetic Hund interaction that decays logarithmically in the case of a heavy-fermion metal. We map out the ground state phase diagram as a function of $N$ and the Kondo coupling. We find crucial differences between the previously proposed mean-field theories in the strength of the hybridization and total magnetization of the coexistent phase. We show that, within our unifying variational theory, the previously proposed decouplings correspond to either taking $N=2$ from the start, or performing a $1/N$ expansion and then extrapolating to $N=2$. Finally, we summarize the generalization of our theory to $S>1$.",
-      "published": "2026-09-09T16:54:21Z",
-      "updated": "2026-09-09T16:54:21Z",
-      "categories": [
-        "cond-mat.str-el"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10443v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10443v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10438v1",
-      "title": "Overcoming Transport Layer Bottlenecks to Quantify Ionic Parameters from Transient Ion Current Measurements of Perovskite Solar Cells",
-      "authors": [
-        "Shudi Jiao",
-        "Miguel Torre Cachafeiro",
-        "Huagui Lai",
-        "Fuxiang Ji",
-        "Tristan Sachsenweger Ballantyne",
-        "Sharun Parayil Shaji",
-        "Matthias Diethelm",
-        "Fan Fu",
-        "Wei E. I. Sha",
-        "Wolfgang Tress"
-      ],
-      "summary": "In perovskite solar cells (PSCs), voltage step-induced transient ion current (TIC) measurements, commonly referred to as bias-assisted charge extraction (BACE), are frequently used to quantify ion density. Drift-diffusion simulations predict that the ion density computed from TIC saturates once mobile ions screen the electric field in the perovskite. However, experimental studies often report ion densities orders of magnitude above this limit, whose physical origin remains incompletely explained in terms of transport layer (TL) properties. In this work, the capacitance of the TLs is identified to be the fundamental bottleneck: the maximum quantifiable ion density is limited to the charge that can accumulate at the perovskite/TL interfaces, so that TIC most often depends more strongly on TL properties than on the ionic properties of the perovskite. Experiments with systematically varied C$_{\\rm 60}$ electron-TL thickness (p-i-n) and Spiro-OMeTAD hole-TL doping (n-i-p) confirm this dependence across architectures. To overcome this limitation, the importance of a correction based on the average ionic displacement is discussed, and it is shown how extrapolating the TL-thickness trend towards the TL-free situation yields the actual ionic conductivity of the absorber, alongside density and mobility, depending on the assumed ionic model. Simulations are also examined in which ion penetration into the TLs or initial accumulation under forward bias raise the capacitive limit and extend TIC sensitivity to higher ion densities. The slow release of trapped carriers is also discussed as a potential source of current which can inflate the TIC signal. Overall, the presented analysis provides important practical considerations for interpreting TIC and quantifying ionic properties in PSCs.",
-      "published": "2026-09-09T16:49:13Z",
-      "updated": "2026-09-09T16:49:13Z",
-      "categories": [
-        "cond-mat.mtrl-sci"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10438v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10438v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10411v1",
-      "title": "WannierNLQG: A Julia package for nonlinear optical responses and quantum geometry from Wannier tight-binding models",
-      "authors": [
-        "Zhuocheng Lu",
-        "Zhichao Guo",
-        "Yuanyuan Xua",
-        "Jiacheng Yao",
-        "Hua Wang"
-      ],
-      "summary": "Nonlinear optical responses and quantum geometry are central to modern condensed matter physics and are deeply intertwined. We introduce WannierNLQG, an extensible Julia framework for computing nonlinear optical responses and quantum geometric quantities from Wannier tight-binding models. Its gauge-consistent, degeneracy-aware architecture accommodates perturbative responses at arbitrary order and additional quantum geometric quantities. The current release evaluates ordinary, spin, and photon-drag injection and shift currents, as Brillouin-zone integrals and on k slices. For shift current, a unified interface exposes four complementary formulations: the conventional method, projector trace, generalized Wilson loop, and a finite-momentum geometric loop, with the last three explicitly accommodating degenerate subspaces. The framework also provides k-resolved Berry curvature, quantum metric, their multipoles, and additional quantum geometric and mixed momentum-spin quantities. Experimental symmetry workflows additionally support symmetry-adapted Wannier construction, symmetrization of tight-binding models and real-space operators, and reduction of spatially uniform response integrals to irreducible k-point orbits and invariant tensor components. The documentation covers formula conventions, the TaskConfig interface, and auditable output formats, with GeS and bilayer MoS2 case studies illustrating method comparison, degeneracy handling, quantum geometric analysis, and photon-drag responses. Together, these capabilities enable first-principles calculations of nonlinear response and quantum geometry in realistic multiband materials, connecting quantum geometry with quantitative materials modeling for optoelectronic, spintronic, and photovoltaic applications.",
-      "published": "2026-09-09T16:30:20Z",
-      "updated": "2026-09-09T16:30:20Z",
-      "categories": [
-        "cond-mat.mes-hall",
-        "cond-mat.mtrl-sci"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10411v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10411v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10391v1",
-      "title": "The Arithmetic of Spectra: Factorization, Statistics, and Symmetric Functions",
-      "authors": [
-        "A. Chaudhary"
-      ],
-      "summary": "We study factorizations of the single-particle spectrum of non-interacting quantum systems and their consequences for many-particle statistics. Representing the single-particle partition function by a spectral alphabet, tensor factorizations become multiplicative factorizations of the alphabet, which can be lifted to canonical Bose and Fermi partition functions using standard symmetric-function and $λ$-ring identities. We show how product spectra arise from different factorizations, how antisymmetrization can be assigned across an odd number of factors, and which tensor factorizations are compatible with a fixed spectrum. The paper therefore studies spectral factorization and provides a consolidated combinatorial framework for canonical Bose and Fermi partition functions.",
-      "published": "2026-09-09T16:11:53Z",
-      "updated": "2026-09-09T16:11:53Z",
-      "categories": [
         "cond-mat.stat-mech",
         "math-ph"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10391v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10391v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11926v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11926v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10389v1",
-      "title": "Fast Synergetic Simulation to Study Slow Evolution of Soliton Patterns in Optical Resonators",
+      "arxivID": "2609.11881v1",
+      "title": "Low temperature thermodynamics of $S_{\\mathrm{eff}}=1/2$ triangular lattice quantum spin liquid candidate TlYbS$_2$",
       "authors": [
-        "Sanzida Akter",
-        "Pradyoth Shandilya",
-        "Logan Courtright",
-        "Amir Leshem",
-        "Giuseppe D'Aguanno",
-        "Omri Gat",
-        "Curtis R. Menyuk"
+        "Bishnu P. Belbase",
+        "Arjun Unnikrishnan",
+        "Piyush Chhallare",
+        "Mohan B. Neupane",
+        "Eun Sang Choi",
+        "Sebastian Erdmann",
+        "Muhammad U. Akbar",
+        "Mamoun Hemmida",
+        "H. -A. Krug von Nidda",
+        "Philipp Gegenwart",
+        "Arnab Banerjee"
       ],
-      "summary": "Complex patterns in physical and biological systems often emerge through slow collective dynamics governed by a small number of key variables. In nonlinear optical resonators, dissipative Kerr solitons provide an important example, where interactions between well-separated solitons can evolve over timescales far longer than the characteristic loss and gain timescales. Direct numerical simulation of these dynamics is challenging because stiffness forces conventional methods to resolve many rapidly damped degrees-of-freedom with very small time steps. We present a numerical scheme, the synergetic method, that eliminates these rapidly damped degrees-of-freedom and retains the slowly evolving modes, enabling time steps many orders of magnitude larger than those used in conventional approaches. Applied to soliton molecules in driven Kerr cavities, the method achieves speedups of $10^3$ to $10^5$ while capturing dynamics on laboratory timescales. We use it to model the full interaction dynamics of a three-soliton molecule and the evolution of an eight-soliton molecule. The approach provides an efficient framework for studying slow pattern formation in nonlinear systems with widely separated timescales.",
-      "published": "2026-09-09T16:11:34Z",
-      "updated": "2026-09-09T16:11:34Z",
+      "summary": "Geometrically frustrated triangular-lattice antiferromagnets exhibit a delicate competition between magnetic order and quantum spin liquid (QSL) behavior, with the Yb-based delafossite family $A$Yb$X_2$ providing a structurally clean platform for exploring this physics. Here, we report a comprehensive study of single-crystal TlYbS$_2$ using DC magnetization, AC susceptibility, electron spin resonance (ESR), and specific heat measurements extending from room temperature to the millikelvin regime. Single-crystal X-ray diffraction confirms a trigonal $R\\bar{3}m$ structure comprising well-separated triangular layers of Yb$^{3+}$ ions with no detectable site disorder. At zero field, a weak thermodynamic anomaly is observed near $530$ mK, which may indicate the onset of a weakly ordered state similar to that reported in KYbSe$_2$. Below $300$ mK, the zero-field magnetic specific heat follows $C_{\\rm m}\\propto T^{1.8}$, close to a quadratic temperature dependence, in contrast to the linear temperature dependence reported for the sister compound TlYbSe$_2$, which has been described in terms of the interplay between spinons and thermally excited gauge-flux excitations. Magnetization and ESR measurements establish pronounced easy-plane magnetic anisotropy, with $g_\\perp/g_\\parallel \\approx 6.9$. The anomaly near $530$ mK exhibits a strongly anisotropic response to magnetic field. For $H\\perp c$, it remains visible up to approximately $2$ T and continuously evolves toward a field-induced ordered phase above approximately $2.5$ T, followed by a sequence of field-induced phases that includes a $1/3$ magnetization plateau between approximately $5$ and $8$ T and full polarization near $17$ T. In contrast, for $H\\parallel c$, the anomaly weakens and is suppressed near $3$ T, consistent with the recently reported confinement--deconfinement transition from an ordered state to a field-induced QSL.",
+      "published": "2026-09-10T17:48:43Z",
+      "updated": "2026-09-10T17:48:43Z",
       "categories": [
-        "nlin.PS"
+        "cond-mat.str-el",
+        "cond-mat.mtrl-sci"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10389v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10389v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11881v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11881v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10381v1",
-      "title": "A First-Principles Multiscale Framework for Topological Superconductivity",
+      "arxivID": "2609.11869v1",
+      "title": "Sparse data limit what a mechanistic corrosion model can predict",
       "authors": [
-        "Christopher L. Jacobs",
-        "Baishali Mandal",
-        "Taehwan Jung",
-        "Purna P. Paudel",
-        "Jason Kawasaki",
-        "Tudor D. Stanescu",
-        "Subhasish Mandal"
+        "Conrard Giresse Tetsassi Feugmo"
       ],
-      "summary": "A microscopic understanding of topological superconductivity (TSC) in real materials requires a materials-informed approach that integrates first-principles electronic structure, superconductivity, and topology within a unified computational framework. Here, we develop such an approach by combining density functional theory, Wannier-based low-energy Hamiltonians, Bogoliubov-de Gennes theory, and Matsubara Green's-function-based Chern number calculations performed directly on realistic multiorbital superconducting Hamiltonians. We apply this framework to bulk-like and monolayer FeTeSe and to FeSe/GaAs heterostructures, enabling a unified investigation of both intrinsic and proximity-induced topological superconductivity. We identify key electronic-structure ingredients that promote robust TSC, including Rashba-active states near the Fermi level, strong induced superconducting pairing, and substantial orbital hybridization between spin-orbit-active and superconducting sectors. Guided by these design principles, we predict multiple topological superconducting phases in Fe-based materials and demonstrate that FeSe/GaAs heterostructures are particularly promising, exhibiting topological transitions at experimentally accessible chemical potentials and low Zeeman fields. Complementing the theoretical predictions, we demonstrate the growth and structural characterization of FeSe/GaAs heterostructures, establishing the experimental feasibility of the proposed materials platform. Our results provide a quantitative route for engineering and screening candidate Majorana materials and heterostructures directly from realistic electronic structures and establish a foundation for future materials-by-design approaches to topological superconductivity.",
-      "published": "2026-09-09T16:06:41Z",
-      "updated": "2026-09-09T16:06:41Z",
-      "categories": [
-        "cond-mat.supr-con"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10381v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10381v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10359v1",
-      "title": "Quantifying translational and bond-orientational order metrics in hyperuniform and nonhyperuniform many-particle systems",
-      "authors": [
-        "Anirban Mukherjee",
-        "Salvatore Torquato"
-      ],
-      "summary": "Quantifying the degree of order/disorder in many-particle systems remains an outstanding problem in physics, materials science, and mathematics. To this end, we consider the translational order metric $τ_T$, defined as the squared $L^2$ norm of the total correlation function $h(\\mathbf{r})$, and introduce its bond-orientational analogue $τ_O$, defined from the weighted total correlation function $h_{\\mathbf{f}}(\\mathbf{r})$ using local orientational weights (S. Torquato et al., Phys. Rev. X 16, 011042 (2026)). The pair $(τ_T,τ_O)$ places both forms of order on a common two-point statistical footing. We compute both metrics for two nonhyperuniform sphere-packing models in 2D and 3D as functions of packing fraction $φ$: 1) equilibrium hard particles and 2) nonequilibrium random sequential addition (RSA) packings. For the nonhyperuniform systems, bond-orientational order remains subdominant along the equilibrium-fluid and RSA configurations; however, its magnitude relative to the translational metric increases near the upper end of the equilibrium-fluid branches, much more strongly in 2D than in 3D, and the two metrics become comparable along the sampled crystal branches. At common packing fractions, equilibrium fluids and RSA packings trace distinct $(τ_T,τ_O)$ trajectories, revealing preparation-dependent differences in structural order. As a representative hyperuniform family, we study 2D disordered stealthy hyperuniform (SHU) ground states for $0<χ<1/2$, where $χ$ is the stealthiness parameter. Within the disordered SHU phase, bond-orientational order remains subdominant, but its magnitude relative to the translational metric increases toward the disorder-to-order threshold. In all three models, $τ_T$ and $τ_O$ are positively correlated beyond the Poisson-reference regime: $τ_O$ increases monotonically with $τ_T$ across the sampled state points.",
-      "published": "2026-09-09T15:54:05Z",
-      "updated": "2026-09-09T15:54:05Z",
-      "categories": [
-        "cond-mat.stat-mech",
-        "cond-mat.mtrl-sci",
-        "cond-mat.soft"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10359v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10359v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10352v1",
-      "title": "Universal correlations in the Abelian sandpile model",
-      "authors": [
-        "Qiyu Liu",
-        "Jan-Niklas Herre",
-        "Prajit Baruah",
-        "Sebastian Dreizler",
-        "Christoph Karrasch",
-        "Wioletta Ruszel",
-        "Dirk Schuricht"
-      ],
-      "summary": "We numerically study the bulk correlation functions in the two-dimensional Abelian sandpile model, aiming both to compare with the predictions of logarithmic conformal field theory and to extend the analysis to lattices where analytical methods are difficult to apply. Wilson's algorithm efficiently generates large-scale uniform spanning trees in parallel, which can be mapped to independent recurrent configurations via the Majumdar--Dhar burning bijection, eliminating sample autocorrelations and yielding fast convergence. On the square (single-sublattice) and honeycomb (two-sublattice) lattices our results agree well with the analytical predictions. For the kagome lattice we provide the first systematic numerical study of the bulk correlation functions, and cross-check the bulk height-1 probability against a closed-form analytical expression that we also derive here via the lattice Green function.",
-      "published": "2026-09-09T15:47:54Z",
-      "updated": "2026-09-09T15:47:54Z",
-      "categories": [
-        "math-ph",
-        "cond-mat.stat-mech",
-        "cond-mat.str-el"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10352v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10352v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10348v1",
-      "title": "Spectroscopic signatures of mode-selective electron-phonon coupling in transient reflectivity change on charge-density-wave TiSe$_2$",
-      "authors": [
-        "Yu Mizukoshi",
-        "Muneaki Hase"
-      ],
-      "summary": "We report on time- and spectrally resolved pump-probe spectroscopy measurement on the charge-density wave (CDW) state of TiSe$_2$ at helium temperatures. The non-oscillatory component of the spectrally resolved signals exhibit a sign reversal near 1.5 eV, which was interpreted as a redshift of the optical transition energy originated from the interband transition between the Se $p$-based valence band to the Ti $d$-derived conduction band. Furthermore, the oscillatory components exhibit distinct spectral dependences between the optical phonons and the CDW-derived modes, suggesting the mode-selective coupling.",
-      "published": "2026-09-09T15:45:07Z",
-      "updated": "2026-09-09T15:45:07Z",
+      "summary": "Mechanistic corrosion models are routinely fitted with four to six parameters to a few measurements and extrapolated across service lifetimes, yet whether the data determine them is rarely tested. We identify a reduced point defect model for the duplex oxide on Nb-stabilized AISI 347 in simulated boiling-water-reactor water from published depth profiles at three exposure times, by differentiable inversion graded against a closed-form reference. Profile likelihood, a 1000-member bootstrap and a prior-relaxation test agree that one of the five parameters is undetermined and a second only weakly so, and that 95% of the fit statistic rests on three chromium points. The kinetics track an empirical power law over the calibration window but diverge from it by a factor of 3.5 to 6.3 at ten years, outside the propagated uncertainty band. That separation, not the thickness it brackets, is what these data determine; an exposure near 3000 hours would resolve it.",
+      "published": "2026-09-10T17:42:52Z",
+      "updated": "2026-09-10T17:42:52Z",
       "categories": [
         "cond-mat.mtrl-sci"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10348v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10348v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11869v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11869v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10342v1",
-      "title": "Quench dynamics in nonreciprocal Aubry-André-Harper model",
+      "arxivID": "2609.11868v1",
+      "title": "Computational framework for quantum state tomography of spin ensembles",
       "authors": [
-        "Zhiyu Pei",
-        "Yongxu Fu",
-        "Gao Xianlong"
+        "Jiwoo Seo",
+        "Vesna F. Mitrović"
       ],
-      "summary": "The critical phase of a non-Hermitian quasicrystal can support stronger transport than its surrounding delocalized phase. We demonstrate this anomalous behavior in the one-dimensional nonreciprocal Aubry-André-Harper model through a combined study of dynamical quantum phase transitions (DQPTs) and wavepacket diffusion. Using a parity-sorted energy-spectrum classification that directly encodes the generalized $\\mathcal{PT}$ symmetry, we find that DQPTs in this system are energy-resolved, in contrast to the energy-independent DQPTs of Hermitian quasicrystals. The energy-resolved features are most pronounced when the initial and final Hamiltonians belong to different phases (localized or extended), and they are tied to the even-odd index structure of the spectrum, which we exploit to organize the quench-dynamical landscape. For wavepacket dynamics after a single-site quench, the diffusion exponent $β$, extracted from the long-time power-law scaling of the root-mean-square displacement $σ(τ)$, partitions the phase diagram into four distinct regimes. In the Hermitian limit the extended phase is ballistic ($β=1$), the critical phase is normally diffusive ($β=0.5$), and the localized phase yields $β\\to 0$. Nonreciprocity reverses this hierarchy: the extended phase becomes normally diffusive, while the critical phase turns ballistic. We trace the anomalous $β=1$ at criticality to the self-similar multifractal structure of the critical eigenstates, whose nodal positions are organized by the golden ratio. A finite-size scaling ansatz built on the wave-front propagation yields $σ(τ)\\proptoτ$. The parity-resolved DQPTs and the $β$-phase diagram establish two complementary dynamical diagnostics of nonreciprocal quasicrystals, in which nonreciprocity promotes transport at the critical point and suppresses it in the delocalized phase.",
-      "published": "2026-09-09T15:38:19Z",
-      "updated": "2026-09-09T15:38:19Z",
+      "summary": "We present Tomography-NMR, an open-source Python package that reconstructs quantum density matrices from spectroscopic measurement data. The package implements a complete analysis pipeline for two-qubit quantum state tomography based on the product operator formalism: raw time-domain signals are Fourier-transformed into frequency-domain spectra, spectral peak intensities are mapped to expansion coefficients of the density matrix, and the full quantum state is reconstructed. Three integration methods are provided for different use cases: direct peak height measurement and fixed-parameter numerical integration require no theoretical reference and are suited to unknown states, achieving fidelities of approximately 98\\% on a benchmark set of known states, while a systematic parameter optimization against a known target state achieves reconstruction fidelities exceeding 99\\% for the same benchmark states. While the detailed theoretical framework for quantum state tomography is well established, the practical procedures for extracting density matrices from experimental spectra are often inadequately documented in the literature and obscured within proprietary software. This package addresses that gap by providing a fully transparent, reproducible implementation of every analysis step, from spectral preprocessing to density matrix visualization. The software has been validated on experimentally prepared two-qubit states measured via nuclear magnetic resonance (NMR) spectroscopy of coupled $^{31}$P nuclei. Average reconstruction fidelities range from 0.975 to 0.995 across a benchmark set of 20 two-qubit states, including the computational basis states, Bell states, and the outputs of three fundamental quantum gates (CNOT, H, and T). Although developed for NMR, the modular architecture facilitates adaptation to other spectroscopic platforms and alternative measurement protocols.",
+      "published": "2026-09-10T17:42:51Z",
+      "updated": "2026-09-10T17:42:51Z",
+      "categories": [
+        "quant-ph",
+        "cond-mat.other",
+        "physics.bio-ph",
+        "physics.comp-ph",
+        "physics.ins-det"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11868v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11868v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11862v1",
+      "title": "High-Temperature ferromagnetism from site-selective filling in (Fe,Ni)$_{6-δ}$GeTe$_2$",
+      "authors": [
+        "Tyler L. Werner",
+        "Jonathan T. Reichanadter",
+        "Xiang Chen",
+        "Pranab K. Nag",
+        "Luna Y. Liu",
+        "Yu-Tsun Shao",
+        "Hongrui Zhang",
+        "Mingyang Guo",
+        "Wenxin Li",
+        "Zhibo Kang",
+        "Han Wu",
+        "Makoto Hashimoto",
+        "Donghui Lu",
+        "Turgut Yilmaz",
+        "Elio Vescovo",
+        "Sung-Kwan Mo",
+        "Barat Achinuq",
+        "Alexei Fedorov",
+        "Jacob C. Ruff",
+        "Ming Yi",
+        "Qiong Ma",
+        "David A. Muller",
+        "Eduardo H. da Silva Neto",
+        "Robert J. Birgeneau",
+        "Jeffrey B. Neaton",
+        "Yu He"
+      ],
+      "summary": "The discovery of high-temperature ferromagnetism in the metallic van der Waals (vdW) system Fe$_N$GeTe$_2$ has brought two-dimensional (2D) magnets into technologically relevant temperature scales. Specifically at N = 5, dilution of magnetic moments by nickel substitution counterintuitively achieves a record high Curie temperature of 478~K. Unraveling the origin of this nickel-substitution-induced enhancement is complicated by the compound's structural complexity, coexistent itinerant and local magnetic contributions, and mesoscopic compositional domains. Through coordinated structural and electronic characterization, we identify that the high-T$_C$ magnetic phase arises from a strain-stabilized Fe$_6$GeTe$_2$ nano-precipitate. Combining first-principles calculations and spin- and angle-resolved photoemission spectroscopy (ARPES), we uncover a site-specific electronic landscape in which interior iron atoms primarily host localized moments while the outer iron atoms neighboring the tellurium layers produce spin-polarized itinerant carriers that cross the vdW gap. The large energy cost associated with homogeneous nickel substitution is found to favor the spontaneous precipitation of the crystallographically and electronically ``clean'' high-T$_C$ phase. Finally, we compare metal-rich vdW magnets with binary magnetic alloys, and discuss the unifying roles of nano-precipitates in stabilizing otherwise unattainable bulk phases. Our work provides mechanistic insights into the record-high T$_C$ ferromagnetism in (Fe,Ni)$_{5+δ}$GeTe$_2$, establishing a rigorous foundation for the atomic engineering of vdW magnetic metals informed by direct electronic signatures.",
+      "published": "2026-09-10T17:41:10Z",
+      "updated": "2026-09-10T17:41:10Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11862v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11862v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11861v1",
+      "title": "High-fidelity k$\\cdot$p representations of first-principles electronic band structures through covariant renormalization",
+      "authors": [
+        "Kristian Berland"
+      ],
+      "summary": "The k$\\cdot$p method can be applied directly to first-principles energies and momentum matrix elements, but the resulting models converge slowly with the number of bands and are inexact wherever the underlying Hamiltonian is nonlocal. We show that both limitations can be largely removed by renormalizing the eigenvalue spectra of the Hermitian momentum matrices. These spectra are gauge invariant, and are identical for symmetry-related Cartesian components, hence scaling the recurring magnitudes provides a modest set of parameters that preserves degeneracies and crystal symmetry without needing to construct a symmetry-adapted basis. We choose to renormalize the models against reference eigenvalues and band velocities on rays out of a high-symmetry point. For GaP, a 15-band model can reproduce the band structure in the near-gap reference regions within a few meV. For zincblende and wurtzite AlN, similar accuracy requires 30- or 66-band models, which in the case of zincblende is traced to the strong warping in the [110] direction. The scheme readily generalizes to rocksalt PbTe, which includes spin-orbit coupling, and has L-centered valence and conduction band extrema. Further, we demonstrate, for GaP, how compact four-band Hamiltonians can be obtained by downfolding within the same renormalization scheme. Moreover, by changing the fitting regime to encompass the entire Brillouin zone, the scheme can be used to generate full-zone models that reproduce the density of states. The practical utility is illustrated with a 59-band k.p model for GaP, which can be evaluated on meshes far denser than the reference calculation, that in turn can be used both to resolve fine features in the density of states and to compute the hole conductivity at low temperature.",
+      "published": "2026-09-10T17:40:55Z",
+      "updated": "2026-09-10T17:40:55Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "physics.comp-ph"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11861v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11861v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11858v1",
+      "title": "Sub-cycle doublon-holon dynamics in one-dimensional Mott insulators revealed by two-color high-harmonic spectroscopy",
+      "authors": [
+        "Lance Hatch",
+        "Aditya Verma",
+        "Eric Schultz",
+        "Hanjun Yang",
+        "Priscila Rosa",
+        "Genda Gu",
+        "Igor Zaliznyak",
+        "Giulio Vampa",
+        "Laimei Nie",
+        "Hanzhe Liu"
+      ],
+      "summary": "Solid-state high-harmonic spectroscopy is becoming an emerging tool for probing nonequilibrium many-body dynamics. Yet, direct measurements of strongly driven, sub-optical-cycle dynamics in correlated materials during high-harmonic emission remain largely unexplored. Here, we measure high-harmonic emission chirp in a prototypical one-dimensional Mott insulator, which encodes strongly driven doublon-holon dynamics at sub-optical-cycle timescales. We observe a positive chirp for above band gap harmonics, indicating that high harmonics are dominated by doublon-holon recombinations. We further show a harmonic order-dependent dephasing, which can be understood through different doublon-holon excursion distances associated with each harmonic. These results reveal coherent doublon-holon dynamics and their ultrafast dephasing in Mott insulators, which is relevant to other nonequilibrium light-induced phenomena, such as Floquet engineering.",
+      "published": "2026-09-10T17:39:14Z",
+      "updated": "2026-09-10T17:39:14Z",
+      "categories": [
+        "cond-mat.str-el",
+        "physics.optics"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11858v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11858v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11816v1",
+      "title": "Piezomagnetism in a model cubic noncollinear altermagnet",
+      "authors": [
+        "Sudarshan Sharma",
+        "Luca Buiarelli",
+        "Richard Spieker",
+        "Ivan Jakovac",
+        "Damjan Pelc",
+        "Turan Birol",
+        "Martin Greven"
+      ],
+      "summary": "Altermagnets constitute a distinct class of magnetic materials that combine compensated magnetic order with spin-polarized electronic bands, hence carrying characteristics of both antiferromagnets and ferromagnets. Piezomagnetism - the linear relationship between lattice strain and a net magnetic moment - has emerged as smoking-gun evidence of altermagnetism that distinguishes it from antiferromagnetism. Here, we uncover a large piezomagnetic response in MnTe2, a cubic altermagnet with a noncollinear spin arrangement and weak spin-orbit coupling. We combine dilatometry with nuclear magnetic resonance, a bulk local probe, to observe signatures of both direct and inverse piezomagnetism consistent with symmetry considerations and first-principles calculations. The dilatometry measurements reveal a shear deformation proportional to an applied magnetic field, while magnetic resonance detects a ferromagnetic moment induced by shear strain. The respective results for the piezomagnetic coupling strength are in good agreement, and they are captured by first-principles results. These findings for simple binary MnTe2 position this material as a model altermagnet, demonstrate the utility of nuclear magnetic resonance in investigations of piezomagnetism, and open new avenues for multimodal strain and magnetic-field control in spintronic and memory applications.",
+      "published": "2026-09-10T17:10:08Z",
+      "updated": "2026-09-10T17:10:08Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11816v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11816v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11811v1",
+      "title": "Block entropy area based non-local fermionic mode optimization with gradient disentanglers",
+      "authors": [
+        "Miklós Antal Werner",
+        "Gero Friesecke",
+        "Andor Menczer",
+        "Kornél Kapás",
+        "Örs Legeza"
+      ],
+      "summary": "We introduce a systematic block entropy area based mode optimization algorithm for many-body quantum states of interacting fermions represented by matrix product states. From the gradient of a global cost function, the block entropy area, a long-ranged, non-interacting effective disentangler Hamiltonian is formed. We then simulate the time-dependent Schrödinger equation driven by the disentangler Hamiltonian by employing the time-dependent variational principle based on projector splitting, and minimize the cost function. The combination of the density matrix renormalization group with this gradient-based entanglement minimization forms an efficient low-rank iterative ground-state algorithm that also provides an optimized single-particle basis for matrix product state representation. We demonstrate the method on two-dimensional lattice models of interacting fermions and the Fe${_4}$S${_4}$ cluster, and show its robustness and superiority over earlier protocols using nearest-neighbor mode rotations and reorderings.",
+      "published": "2026-09-10T17:05:07Z",
+      "updated": "2026-09-10T17:05:07Z",
+      "categories": [
+        "cond-mat.str-el",
+        "cond-mat.stat-mech",
+        "physics.comp-ph",
+        "quant-ph"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11811v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11811v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11810v1",
+      "title": "Interacting Tomonaga-Lüttinger liquid with impurity for interaction constant $K = 1/2$: Thermopower investigation, entropy variation and heat capacity densities associated with thermoelectric particle transport",
+      "authors": [
+        "Abdellah Touati",
+        "Redoune Zamoum",
+        "Farhi Houssam Eddine"
+      ],
+      "summary": "We investigate thermoelectric and thermodynamic properties of a Tomonaga-Luttinger liquid with interaction parameter $K=1/2$ in the presence of a localized impurity. Using bosonization and refermionization, we derive an exact expression for the thermopower in the nonlinear regime and obtain the corresponding Seebeck coefficient in linear response. At low temperature, the Seebeck coefficient follows a Mott-like relation governed by the energy dependence of the transmission coefficient and is found to be closely related to the entropy per particle. This connection allows us to derive using Kelvin formula the thermopower contribution to the entropy density variation and the charge-carriers contribution to the heat capacity density. Both quantities exhibit Mott-like behavior in the low-temperature regime. We apply our results to a fractional quantum Hall quantum point contact and to a one-channel quantum conductor coupled to an Ohmic environment. Our results demonstrate the close connection between thermoelectric transport and thermodynamic properties in interacting one-dimensional quantum systems.",
+      "published": "2026-09-10T17:04:23Z",
+      "updated": "2026-09-10T17:04:23Z",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11810v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11810v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11792v1",
+      "title": "Learning Quantum Matter through Attention in Complex Space",
+      "authors": [
+        "Mingrui Jing",
+        "Erdong Huang",
+        "Jizhe Lai",
+        "Enji Xiong",
+        "Jin-Guo Liu",
+        "Xin Wang"
+      ],
+      "summary": "Magnetic many-electron wavefunctions require amplitude and phase to be optimized together. Whether a complex internal representation improves this variational search is a practical question for neural wavefunction design. We introduce Complex Psiformer for interacting electrons in a magnetic moiré continuum, combining complex hidden features and Hermitian-magnitude attention with magnetic boundary conditions and fermionic antisymmetry. After the same number of optimization steps, Complex Psiformer reaches lower energies than Real Psiformer in two finite supercells. Both Psiformers also improve on their respective neural Hartree-Fock references. Across five training seeds in the 25-cell system, the mean Complex advantage is 1.458 meV per electron, with a smaller observed spread. A separately trained two-electron Complex state has a smaller energy gap to a finite configuration interaction reference than its Real counterpart. In the Complex states, flux scans show nonmonotonic density correlations and weaker honeycomb mean-density modulation at higher flux, while connected fluctuations persist. Gauge invariant current maps provide a qualitative comparison of local circulation in the optimized states. These benchmarks support the combined architecture as a variational ansatz for studying energies and charge arrangements in finite magnetic systems.",
+      "published": "2026-09-10T16:44:55Z",
+      "updated": "2026-09-10T16:44:55Z",
+      "categories": [
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11792v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11792v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11755v1",
+      "title": "Device Engineering and Performance Optimization of Cu2NiGeS4 Thin-Film Solar Cells with In2S3/MoTe2 Charge-Selective Layers: A Computational Study",
+      "authors": [
+        "Md Tashfiq Bin Kashem",
+        "Hasib Md Abid Bin Farid"
+      ],
+      "summary": "The pursuit of efficient and sustainable thin-film photovoltaics increasingly demands absorber materials that combine strong optical absorption with earth-abundant and environmentally benign constituents. Cu2NiGeS4 (CNGS) has emerged as a promising quaternary chalcogenide absorber owing to its favorable optoelectronic properties and high absorption coefficient, yet its photovoltaic potential remains comparatively underexplored, particularly in conjunction with optimized charge-selective layers. Here, we introduce and comprehensively investigate an CNGS-based solar-cell architecture using SCAPS-1D, with In2S3 and MoTe2 serving as the electron and hole-transport layers respectively. The analysis of energy-band profiles, electric fields, carrier distributions, and generation-recombination characteristics reveals the mechanisms governing carrier separation and extraction across the heterojunctions. Systematic optimization of layer thickness, doping density, bulk and interface defect densities, recombination coefficients, parasitic resistances, temperature, and illumination intensity identifies the key factors limiting device performance. The optimized device is predicted to achieve a power conversion efficiency (PCE) of 28.44% with a open-circuit voltage (VOC) of 0.984 V, short-circuit current density (JSC) of 34.39 mA/cm2, and fill factor (FF) of 84.04%, under AM1.5G illumination at 300 K. This simulated efficiency exceeds the previously reported 6.25-21.17% range for CNGS-based solar cells considered in this study. The findings establish In2S3/CNGS/MoTe2 as a promising platform for next-generation thin-film photovoltaics and provide physically grounded design guidelines for absorber optimization, interface engineering, and future experimental realization.",
+      "published": "2026-09-10T16:09:19Z",
+      "updated": "2026-09-10T16:09:19Z",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11755v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11755v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11745v1",
+      "title": "Unraveling the Kagome Antiferromagnetic $3J$ Model and Its Materials: An Integrated Approach",
+      "authors": [
+        "Xin Lu",
+        "Andreas Raikos",
+        "Menghan Song",
+        "Zezong Li",
+        "Lankun Han",
+        "Shiliang Li",
+        "Sylvain Capponi",
+        "Zi Yang Meng",
+        "Chengkang Zhou"
+      ],
+      "summary": "We investigate the ground-state and finite-temperature properties of the kagome antiferromagnetic Heisenberg model with three inequivalent couplings, dubbed the 3J model, which is designed for the candidate Dirac quantum spin liquid (QSL) material YCu$_3$(OH)$_6$Br$_2$[Br$_{1-x}$(OH)$_x$] (see, e.g., Zeng et al., 2024). Employing large-scale density-matrix renormalization group (DMRG) supplemented by neural quantum states (NQS) simulations, we identify an intermediate QSL phase between two magnetically ordered phases. We also find that this QSL is separated from the kagome spin liquid ground state at the isotropic limit. To establish a direct comparison with experiments, we compute the specific heat of the model by means of advanced exponential (XTRG) and tangent-space (tanTRG) thermal tensor-network methods. In the magnetically ordered phase, the specific heat over temperature exhibits a shoulder at a temperature that is a fraction of the coupling strength $J_{hex}$, which disappears in the QSL phase. These universal behaviors are consistent with the experimentally observed specific heat in 3J materials for both ordered and QSL candidate samples. Our work thus connects microscopic models with experimentally measurable signatures, exemplifying an integrated approach (see Meng et al., 2026) to understanding QSL phenomena in frustrated quantum magnets, with 3J materials serving as a representative case and providing a foundation for future studies.",
+      "published": "2026-09-10T16:00:46Z",
+      "updated": "2026-09-10T16:00:46Z",
+      "categories": [
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11745v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11745v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11732v1",
+      "title": "Hilbert-space selected switch of helical edges in an artificial quantum Hall insulator",
+      "authors": [
+        "Naijie Ren",
+        "Zhiren Xiong",
+        "Kaining Yang",
+        "Yanran Shi",
+        "Hanwen Wang",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Neng Wan",
+        "Xiaojun Jia",
+        "Jianpeng Liu",
+        "Zheng Vitto Han",
+        "Yaning Wang"
+      ],
+      "summary": "Quantum Hall effects (QHE) host one-dimensional topologically-protected edge channels, which can serve as an essential ingredient in exotic quantum electronic systems. Yet the manual reconstruction of Landau-level topology, by electrostatic confinement or symmetry breaking, remains experimentally challenging. Here, we show that interfacial charge transfer in between CrOCl and large-angle twisted bilayer graphene offsets the two otherwise decoupled Dirac Landau-level ladders in each graphene layer, creating a new sequence of composite filling configurations. At charge neutrality, the composited $(+2,-2)$ state involves only the zeroth Landau levels and becomes fully insulating, with longitudinal resistance reaching the G$Ω$ regime. By contrast, higher composite zero-filling quantum Hall states, including $(+6,-6)$ and $(+10,-10)$, retain counter-propagating helical edge channels and exhibit pronounced non-local transport, reaching up to $50\\%$ of the local response. We attribute such switching-behavior to the Landau-spinor Hilbert space -- as the filling is reduced from $(+6,-6)$ to $(+2,-2)$, the orthogonal $N=\\pm1$ orbital components are removed, eliminating the edge-compatible channel and gapping both bulk and boundary transport. The interaction nature of the observed gapped sates was further examined both experimentally and theoretically. Our results suggest that charge transfer provides a direct route to engineer artificial quantum Hall insulators, opening possibilities for wavefunction-selective control of helical edge modes.",
+      "published": "2026-09-10T15:47:16Z",
+      "updated": "2026-09-10T15:47:16Z",
       "categories": [
         "cond-mat.mes-hall",
         "quant-ph"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10342v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10342v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11732v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11732v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10310v1",
-      "title": "Constrained Optimization of Higher-Order Cluster-Expansion Hamiltonians for Alloys Using Simulated Bifurcation",
+      "arxivID": "2609.11711v1",
+      "title": "Interplay of Kekulé order, flat bands and electron-phonon coupling in graphene",
       "authors": [
-        "Kazuhide Ichikawa",
-        "Satoru Ohuchi",
-        "Tomoyasu Yokoyama",
-        "Takuma Saito",
-        "Yoshiki Matsuda"
+        "Dominik Szczȩśniak"
       ],
-      "summary": "Identifying ground-state and low-energy atomic configurations is a central problem in alloy design. The cluster-expansion (CE) method represents configurational energetics on a fixed lattice as an effective Hamiltonian; for binary alloys, higher-order CE models become polynomial Ising Hamiltonians. Using Au-Cu as a model binary alloy, we formulate cubic and quartic cluster-expansion Hamiltonians as penalty-augmented polynomial unconstrained binary optimization (PUBO) problems under fixed-composition constraints. We optimize these PUBO problems using SQBM+, a simulated-bifurcation-based solver that can treat higher-order polynomial binary objectives directly. This direct PUBO treatment avoids the need to construct an explicit quadratic reformulation with auxiliary variables. Composition constraints are imposed through quadratic penalty terms, whose weights are estimated from derivative coefficients of the continuous relaxation of the CE objective. Benchmark calculations for systems up to 2048 atoms show that SQBM+ robustly obtains low-energy feasible configurations for cubic CE models and remains effective for many quartic instances. Formation-energy convex hulls constructed from the optimized configurations recover the CuAu and Cu3Au ordering trends and reveal finite-size effects at off-stoichiometric compositions. These results demonstrate simulated bifurcation as a practical route to constrained higher-order CE optimization for alloy configuration search.",
-      "published": "2026-09-09T15:18:02Z",
-      "updated": "2026-09-09T15:18:02Z",
+      "summary": "The Kekulé order in graphene is known to give rise to extended flat bands near the van Hove singularity (VHS) and enhanced electron-phonon coupling. However, the microscopic mechanism underlying the coexistence of these effects remains unclear. Here, it is shown that they jointly emerge as a consequence of the lattice distortion manifested through the differentiation of carbon bonds and associated electronic hoppings. In this picture, the conduction band around the $M$ point decreases almost linearly in width with increasing Kekulé order, while the VHS and dimensionless electron-phonon coupling exhibit approximately quadratic upward responses. The resulting enhancement of the electron-phonon coupling is governed predominantly by the increasing density of states at the VHS, with the effective deformation potential remaining weakly affected by the distortion. As such, the obtained results are consistent with previous related theoretical and experimental studies, while also pointing toward a potential shallowing of the conduction band under the characteristic $1/4$ filling and an increasing relevance of nonadiabatic electron-phonon effects beyond the conventional Migdal approximation. Altogether, these findings highlight the potential of controlled Kekulé ordering for engineering emergent correlated quantum phases in graphene.",
+      "published": "2026-09-10T15:29:19Z",
+      "updated": "2026-09-10T15:29:19Z",
       "categories": [
-        "cond-mat.mtrl-sci",
-        "physics.comp-ph"
+        "cond-mat.mes-hall"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10310v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10310v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11711v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11711v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10301v1",
-      "title": "Structural and Electronic Properties of Bulk $β$(2H)-GaSe from First-Principles DFT Calculations with van der Waals Corrections",
+      "arxivID": "2609.11696v1",
+      "title": "Stress-Testing Dynamical and Generative Downscaling Using Subseasonal Extreme Precipitation Forecasts",
       "authors": [
-        "Julián A. Aros-González",
-        "Camilo A. Huertas-Archila",
-        "Miguel J. Espitia-Rico"
+        "Mauricio Lima",
+        "Marika Koukoula",
+        "Romain Pilon",
+        "Monika Feldmann",
+        "Erwan Koch",
+        "Daniela I. V. Domeisen",
+        "Tom Beucler"
       ],
-      "summary": "Gallium selenide (GaSe) is a layered III-VI semiconductor whose bulk crystal serves as the essential energetic reference for modeling the isolated monolayer. We present a systematic density-functional-theory (DFT) study of the centrosymmetric $β$(2H)-GaSe polymorph, employing the GGA-PBE functional supplemented with a semiempirical Grimme DFT-D2 dispersion correction to accurately capture the weak van der Waals interlayer coupling. The optimized in-plane lattice parameter agrees well with experimental values (within about 1.3%), while the out-of-plane parameter c is overestimated by the DFT-D2 correction relative to experiment, a known limitation of this dispersion scheme when the pairwise $C_6$ coefficients are not specifically fitted for the compound class under study. Electronic structure calculations confirm a non-magnetic, direct-gap profile (1.12 eV). Although this magnitude reflects the well-known underestimation of semilocal functionals, the qualitative band topology accurately captures the intrinsic two-dimensional carrier confinement within the bulk material. Consequently, this optimized three-dimensional framework provides a consistent energetic baseline for quantifying exfoliation processes, offering a reliable starting point for future theoretical explorations of the two-dimensional limit, such as surface functionalization for potential spintronic applications.",
-      "published": "2026-09-09T15:14:15Z",
-      "updated": "2026-09-09T15:14:15Z",
+      "summary": "Coarse spatial resolution limits the ability of subseasonal prediction models to resolve extreme precipitation. Downscaling with either dynamical or deep generative models can overcome this issue, but the comparative performance of these models for extremes across different atmospheric regimes remains poorly understood. In this work, we evaluate the Weather Research and Forecasting (WRF) model against a diffusion-based generative model by downscaling two physically distinct, extreme precipitation events up to lead times of 3 weeks. For a fair comparison with WRF, which can downscale boundary conditions from different driving models without model-specific training, the diffusion model is trained in an unpaired fashion. Both approaches improve upon the raw European Centre for Medium-Range Weather Forecasts forecasts, in comparison to fused rain gauge-radar observations in Switzerland (CombiPrecip), but exhibit regime-dependent strengths. WRF achieves the highest probabilistic skill for a multicell, non-stationary event. Conversely, the diffusion model is more consistent across different performance metrics for the two events, outperforming WRF in a more stationary supercell event. These results demonstrate that explicit dynamical modeling can add value for specific precipitation events for subseasonal lead times, and that generative downscaling adds value more broadly in different situations.",
+      "published": "2026-09-10T15:21:40Z",
+      "updated": "2026-09-10T15:21:40Z",
       "categories": [
-        "cond-mat.mtrl-sci"
+        "physics.comp-ph",
+        "physics.geo-ph",
+        "stat.ML"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10301v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10301v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11696v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11696v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10256v1",
-      "title": "Integrated Population Balance and Multiphysics Modeling for Predicting Undesired Agglomeration in Small Molecule Manufacturing",
+      "arxivID": "2609.11686v1",
+      "title": "Out-of-equilibrium relaxation dynamics of the superconducting order parameter in CsV$_3$Sb$_5$",
       "authors": [
-        "Prakitr Srisuma",
-        "Peter Hou",
-        "Shashank Venkat Muddu",
-        "Neda Nazemifard",
-        "Allan S. Myerson",
-        "Richard D. Braatz"
+        "Avi Shragai",
+        "Alexander Won",
+        "Jonathan M. DeStefano",
+        "Andrea Capa Salinas",
+        "Ganesh Pokharel",
+        "Stephen D. Wilson",
+        "B. J. Ramshaw"
       ],
-      "summary": "Agitated filter dryers (AFDs) are a crucial unit operation in small molecule manufacturing that enables simultaneous filtration, washing, and drying of active pharmaceutical ingredients. One of the key challenges in AFDs is associated with undesired agglomeration, where the presence of hard agglomerates results in off-spec products, equipment damage, and additional downstream processing. This article presents a novel mechanistic model that describes the formation of soft and hard agglomerates during agitated filter drying. By integrating population balance and multiphysics modeling, the model can accurately predict the evolution of the product temperature, moisture content, and particle size distribution, and hence quantify the extend and impact of undesired agglomeration across various operating conditions. Our proposed model-based framework enables the rational design and operation of AFDs for improving the product quality and process reliability.",
-      "published": "2026-09-09T14:41:24Z",
-      "updated": "2026-09-09T14:41:24Z",
-      "categories": [
-        "cs.CE",
-        "cond-mat.other",
-        "physics.comp-ph"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10256v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10256v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10252v1",
-      "title": "Surrogate-Assisted Inverse Design and Temperature-Dependent Electrothermal Analysis of an All-Oxide Narrowband Thermophotovoltaic Emitter",
-      "authors": [
-        "Bibekananda Nath",
-        "Kawshik Nath",
-        "Ahmed Zubair"
-      ],
-      "summary": "A narrowband emitter aligning with the bandgap of the underlying solar cell is essential for improving the spectral efficiency and thermal stability of thermophotovoltaic (TPV) systems. Emitters based on oxide materials present a promising solution to the optical and mechanical performance degradation of traditional emitters, which employ metal-dielectric structures that experience metal oxidation and structural deterioration at high temperatures. Here, we presented a surrogate-assisted inverse-design framework for a narrowband 1D grating emitter comprising ITO and Al2O3 layers on a sapphire substrate. We performed Bayesian optimization over the trained ExtraTrees surrogates on a penalty-augmented objective containing a peak-emission constraint (E_peak > 0.90) while minimizing the full width at half maximum (FWHM) and maximizing the fraction of emission concentrated within the selected peak-centered spectral band to acquire a high, narrowband peak emission. The surrogate model was trained using a dataset of emission spectra obtained from the finite-difference time-domain (FDTD) by systematically varying the layers' thicknesses and the structure's period as the input features, and the narrowband emission's figure of merit (FOM) ((E_peak), wavelength of peak emission (_peak), FWHM, in-band fraction (f_in) for determining the amount of emission outside the peak band, and concentration of peak emission near the peak) was used as the prediction target. The resulting set of predictions for the optimized structure was further validated using the FDTD method.",
-      "published": "2026-09-09T14:39:54Z",
-      "updated": "2026-09-09T14:39:54Z",
-      "categories": [
-        "physics.optics",
-        "physics.app-ph",
-        "physics.comp-ph"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10252v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10252v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10240v1",
-      "title": "Order elevation of directly self-starting sub-step implicit integrators for transient dynamics",
-      "authors": [
-        "Jinze Li",
-        "Yaokun Liu",
-        "Kewei Chen",
-        "Hua Li",
-        "Kaiping Yu"
-      ],
-      "summary": "Directly self-starting implicit methods are attractive for transient analysis because they avoid auxiliary starting procedures while retaining the original first- or second-order governing equations. However, most existing formulations usually fix the last sub-step at the end of each time interval, which restricts the attainable order. This study develops a generalized $s$-sub-step implicit framework by releasing this constraint and treating all sub-step locations as design variables. The resulting methods admit a unified Runge--Kutta representation for both first- and second-order transient systems and preserve identical effective matrices over all sub-steps. Accuracy conditions are derived by simultaneously matching the numerical amplification factor and load operator, thereby accounting for both homogeneous and forced responses. For $s=1,~\\cdots,~6$, two complementary families are obtained: $s$th-order members with user-controllable high-frequency numerical dissipation and adjustable sub-step locations, and $(s+1)$th-order members obtained by selecting the sub-step locations, with fixed dissipation. The latter reach up to seventh-order accuracy without increasing the number of sub-steps, although some high-order members are $A(α)$-stable with stability angles extremely close to $90^\\circ$. Analytical amplitude and phase errors further reveal parity-dependent superconvergence in undamped systems, and appropriate parameter selections can substantially increase either phase or amplitude accuracy beyond the formal order. Numerical benchmarks confirm the predicted convergence orders and the controllable suppression of spurious high-frequency responses.",
-      "published": "2026-09-09T14:32:36Z",
-      "updated": "2026-09-09T14:32:36Z",
-      "categories": [
-        "math.NA",
-        "physics.comp-ph"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10240v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10240v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10227v1",
-      "title": "Italian Business-to-Business Invoicing Data: A Network Analysis",
-      "authors": [
-        "Valerio Astuti",
-        "Daniele Piras"
-      ],
-      "summary": "We present a comprehensive description of the network of Italian Business-to-Business commercial relationships, based on the universe of electronic invoices collected by the Italian Tax Office. The firm-to-firm detail of the data is exploited to describe the distribution of the numbers of buyers (customers) and sellers (suppliers) per firm, the centrality of each firm in the production network, and the average distance between firms. We characterize for the first time the firm-to-firm network describing the Italian production system, and present its geographic and sectoral breakdown. The analysis reveals heavy tailed distributions for the numbers of buyers and sellers per firm, implying a scale-free structure of the network. The distributions of centrality values display heavy tails as well, indicating a strong concentration of importance in a relatively small number of firms. We estimate the tail exponents for all these distributions, finding in all cases lower exponents for downstream (buyer-side) distributions than for the upstream (seller-side) ones.",
-      "published": "2026-09-09T14:23:52Z",
-      "updated": "2026-09-09T14:23:52Z",
-      "categories": [
-        "cond-mat.stat-mech",
-        "econ.GN",
-        "physics.soc-ph"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10227v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10227v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10212v1",
-      "title": "Nonlinear Edelstein effect in Rashba superconductors",
-      "authors": [
-        "Hikaru Ueki",
-        "Youichi Yanase"
-      ],
-      "summary": "We formulate a quasiclassical theory of the Edelstein effect in superconductors that incorporates both intraband and interband contributions. To describe the interband contribution, which is absent from the conventional leading-order quasiclassical formulation, we derive augmented Eilenberger equations in the presence of antisymmetric spin-orbit coupling. The intraband contribution is evaluated using multiband Eilenberger equations. We apply these formulations to supercurrent-induced surface spin magnetization in $s$-wave Rashba superconductors and investigate its dependence on temperature, distance from the surface, spin-orbit coupling strength, and supercurrent. The intraband contribution originates from a supercurrent-induced asymmetry of quasiparticles with opposite momenta and spin polarizations, whereas the interband contribution arises from the anomalous-velocity term generated by the momentum derivative of the Rashba spin-orbit potential. In the helicity basis, this anomalous-velocity term is expressed in terms of the Berry connection associated with the momentum dependence of the Rashba eigenstates. The intraband contribution increases linearly with the spin-orbit coupling strength, whereas the interband contribution exhibits a nonmonotonic dependence and is maximized when the Rashba spin splitting is comparable to the superconducting gap. Moreover, within the clean $s$-wave Rashba model considered here, we find that the nonlinear dependence of magnetization on the supercurrent arises solely from the interband contribution. Thus, although the intraband contribution dominates the linear Edelstein effect, the nonlinear Edelstein effect can serve as a useful probe of the interband contribution originating from quantum geometry.",
-      "published": "2026-09-09T14:13:13Z",
-      "updated": "2026-09-09T14:13:13Z",
+      "summary": "The application of a time-varying strain field drives a superconducting order parameter out of equilibrium. How the order parameter relaxes back to equilibrium depends both on the structure of the superconducting gap and on the nature of quasiparticle scattering. We report the discovery of an ultrasonic attenuation peak inside the superconducting state of the kagome superconductor CsV$_3$Sb$_5$. This peak is the natural consequence of the order parameter relaxation time matching the ultrasonic drive frequency near $T_{\\rm c}$. From the measured frequency dependence of the peak, we extract a microscopic scattering time of $τ_N = 25$ ps. This timescale is two orders of magnitude longer than the elastic scattering time as determined by resistivity measurements, but is comparable to the inelastic scattering time determined by thermal transport. Within the conventional framework of order-parameter relaxation, this implies that elastic scattering is ineffective at relaxing the superconducting condensate, consistent with a sign-preserving $s$-wave state obeying Anderson's theorem.",
+      "published": "2026-09-10T15:15:12Z",
+      "updated": "2026-09-10T15:15:12Z",
       "categories": [
         "cond-mat.supr-con"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10212v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10212v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11686v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11686v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10194v1",
-      "title": "Beyond Impedance Additivity: A Systematic Nonlinear Perspective on Memristor Associations",
+      "arxivID": "2609.11684v1",
+      "title": "Bridging steady-state and time-domain descriptions of molecular electron transport",
       "authors": [
-        "Luiz A. Meneghetti",
-        "Leonardo K. Castelano",
-        "Antônio Sérgio dos Santos",
-        "Soumen Pradhan",
-        "Fabian Hartmann",
-        "Ovidiu Lipan",
-        "Sven Höfling",
-        "Victor Lopez-Richard"
+        "Thibaut Lacroix",
+        "Namgee Cho",
+        "Clemens Vittmann",
+        "James Lim",
+        "Susana F. Huelga",
+        "Martin B. Plenio"
       ],
-      "summary": "We investigate the validity of the superposition principle and impedance additivity in AC circuits containing a memristive device connected in series with a resistor, capacitor, or inductor. While the series association of impedances is a cornerstone of linear circuit theory, its applicability to memory-bearing nonlinear systems remains largely unexplored. Using a state-dependent memristive model, we numerically analyze the stationary current response under sinusoidal excitation and characterize the resulting harmonic spectra, Bode diagrams, and Nyquist plots. To assess whether the fundamental response can still be interpreted through an equivalent-circuit framework, we introduce the concept of an apparent memristor, whose effective parameters are extracted directly from the composite impedance. We show that, although the fundamental harmonic can be accurately reproduced by an apparent equivalent circuit over selected parameter ranges, the effective parameters differ substantially from those of the isolated memristor, revealing a renormalization induced by the coupling to the passive element. More importantly, we identify parameter regimes in which the apparent-circuit description breaks down altogether, particularly for capacitor and inductor-coupled systems, demonstrating that the composite impedance cannot generally be expressed as the sum of independent impedances. These results establish boundaries for the use of equivalent-circuit models in memory-enabled electronic systems and provide practical guidelines for the interpretation of impedance spectroscopy in nonlinear devices exhibiting memory.",
-      "published": "2026-09-09T14:02:18Z",
-      "updated": "2026-09-09T14:02:18Z",
+      "summary": "Electron transmission from an input electrode, through a molecular system, to an output electrode has been widely studied using the steady-state non-equilibrium Green's function (NEGF) method. Recently, the wave packet method, which provides access to the transient dynamics of electrons as well as internal molecular degrees of freedom, has been employed to investigate enantiospecific electron transport through chiral molecules. In this work, we derive the quantitative relation between the transmission of a finite-size wave packet and the energy-resolved NEGF transmission, showing that the former corresponds to a spectral average of the latter weighted by the wave packet energy distribution. Exploiting this correspondence, we construct non-Gaussian auxiliary wave packets whose spectral weight encodes the Landauer energy-window, allowing current-voltage characteristics to be obtained directly from time propagation. We further show that the correspondence extends to spin-resolved transport in a spin-phonon model of chirality-induced spin selectivity.",
+      "published": "2026-09-10T15:13:24Z",
+      "updated": "2026-09-10T15:13:24Z",
       "categories": [
-        "cond-mat.mtrl-sci"
+        "cond-mat.mes-hall",
+        "quant-ph"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10194v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10194v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11684v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11684v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10190v1",
-      "title": "pyeCE: A Python Implementation of the Embedded Cluster Expansion",
+      "arxivID": "2609.11678v1",
+      "title": "Acoustic Wave-Function Imaging of Sublattice Physics in a Kagome Lattice",
       "authors": [
-        "Yann L. Müller",
-        "Claire A. Paetsch",
-        "Anirudh Raju Natarajan"
+        "L. Müller",
+        "N. Endres",
+        "B. Geldiyev",
+        "S. Widmann",
+        "K. Burkard",
+        "M. Ünzelmann",
+        "F. Reinert"
       ],
-      "summary": "The cluster expansion is a widely used approach for predicting the finite-temperature thermodynamics of alloys from zero-kelvin first-principles calculations, but its conventional formulation becomes intractable for materials with more than three or four chemical species. High-entropy alloys have therefore remained largely out of reach. We present pyeCE, an open-source Python library that implements the embedded cluster expansion (eCE), in which machine learning maps many chemical species onto a smaller set of effective species and thereby limits the growth in the number of cluster functions. pyeCE provides the complete modeling workflow, including the construction of symmetry-adapted descriptors with a learnable per-sublattice chemical embedding, a neural-network energy model, ladder-based training, uncertainty quantification, and finite-temperature simulations through Monte Carlo sampling. Built on the PyTorch and pymatgen libraries, it supports systems with multiple species on multiple sublattices and runs on graphics processing units. We demonstrate the package on two material systems. In the first, a single model spanning the full composition space of a 9-component refractory alloy resolves short-range order and order--disorder behavior. This model enables rapid screening for compositions with strong Cr clustering, a feature linked to the formation of a continuous, corrosion-resistant oxide scale. In the second, a model of hydrogen dissolution in a Mo--Nb--W alloy reproduces the composition dependence of hydrogen uptake and resolves the interstitial environments that hydrogen occupies. The modular design of pyeCE allows it to be extended to problems beyond alloy thermodynamics, including kinetics, defect energetics, and the coupling of chemical order to magnetic and vibrational degrees of freedom.",
-      "published": "2026-09-09T13:57:45Z",
-      "updated": "2026-09-09T13:57:45Z",
+      "summary": "The canonical kagome band structure hosts a Dirac cone, saddle-point van Hove singularities (vHS), and a flat band. Characteristically, these features exhibit distinct sublattice localization within the three-site basis of the kagome lattice. However, experimental proof of this sublattice character is challenging and requires direct access to both the real-space wave function and its associated momentum-space texture. Here, we implement an acoustic kagome lattice on the cm scale and measure the full excitation spectrum, thereby imaging the wave function at each lattice site, including both amplitude and phase. This enables investigation of the momentum-dependent sublattice texture across the complete band structure, particularly at the flat band and at the mixed- and pure-sublattice van Hove singularities. Our results are in excellent agreement with minimal tight-binding model calculations and constitutes the first direct experimental observation of the sublattice-resolved band structure in a kagome lattice.",
+      "published": "2026-09-10T15:10:22Z",
+      "updated": "2026-09-10T15:10:22Z",
       "categories": [
-        "cond-mat.mtrl-sci",
-        "cond-mat.stat-mech"
+        "cond-mat.str-el"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10190v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10190v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11678v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11678v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10188v1",
-      "title": "Topology-dependent mixing of knots in flexible polymer chains",
+      "arxivID": "2609.11675v1",
+      "title": "Certified reduced-basis emulation of conformal field theories on the fuzzy sphere",
       "authors": [
-        "Souradeep Sengupta",
-        "Garima Mishra"
+        "Virgil V. Baran"
       ],
-      "summary": "The organization of multiple knots along a polymer contour can depend sensitively on the topology of the constituent knots. Using coarse-grained Brownian-dynamics simulations, we investigate topology-dependent mixing of two knots in a flexible polymer at controlled normalized wall separation. We compare homogeneous ($3_1\\otimes 3_1$) and heterogeneous ($3_1\\otimes 5_1$) knot pairs using a contour-based coordinate that distinguishes mixed and demixed configurations. Starting from partially overlapping configurations, the $3_1\\otimes 5_1$ pair is observed in mixed configurations more frequently over the simulation time window than the $3_1\\otimes 3_1$ pair at intermediate wall separation. We further find that, over the intermediate range of normalized wall separation, mixing of the $3_1\\otimes5_1$ pair produces a composite knotted region that occupies substantially less polymer contour than the two constituent knots collectively occupy in demixed configurations. The corresponding reduction in contour occupancy is much smaller for the $3_1\\otimes3_1$ pair. This indicates that the heterogeneous constituent topologies can be accommodated within a smaller portion of the polymer contour in the composite configuration. These results establish that constituent topology can strongly influence multiple-knot organization in flexible polymers.",
-      "published": "2026-09-09T13:55:54Z",
-      "updated": "2026-09-09T13:55:54Z",
-      "categories": [
-        "cond-mat.soft",
-        "cond-mat.stat-mech"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10188v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10188v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10186v1",
-      "title": "Fast, Accurate, and Scalable Fermionic Neural Networks via Translation Equivariance",
-      "authors": [
-        "David D. Dai",
-        "Yen-Ting Lin",
-        "Marin Soljačić"
-      ],
-      "summary": "We demonstrate that designing a neural quantum state to be an exact eigenstate of the Hamiltonian's symmetries significantly improves both training speed and final variational energy. For the 2D electron gas, we design TorFormer, a neural network wavefunction which is an exact eigenstate of the total momentum. TorFormer describes both the Fermi liquid and Wigner crystal with no supervision and significantly outperforms Psiformer-based references up to large system sizes. For $r_s = 30.0$ and $40.0$ at $N=91$, we compare TorFormer trained for $8\\mathrm{K}$ steps against the previous best NQS, which required $100\\mathrm{K}$ training steps. Our improvement to the total energy at $r_s = 40.0$, excluding the trivial Madelung part, is $0.12\\%$---enormous compared to the tiny differences separating phases. Relative to Slater-Jastrow-backflow diffusion Monte Carlo, TorFormer's energy decrease is roughly $9.8$ times that of the previous best NQS. Our work demonstrates that neural quantum states can both accurately and efficiently solve large-scale problems.",
-      "published": "2026-09-09T13:54:23Z",
-      "updated": "2026-09-09T13:54:23Z",
+      "summary": "Fuzzy-sphere regularization gives numerical access to three-dimensional conformal field theories (CFTs), but locating one requires testing for criticality across the parameter space of microscopic couplings. We reduce the search cost by about two orders of magnitude, combining an exact diagonalization based on states having definite total angular momentum with a certified reduced-basis emulator that reconstructs energies, observables and their derivatives continuously across the couplings from a handful of exact solutions per system size. The combination reproduces the published ground-state-energy analysis of the fuzzy-sphere Ising model and the published conformal data of a three-flavor fuzzy-sphere realization of the O(2) Wilson--Fisher CFT, including quantities defined by parameter derivatives. Applied to the O(2) model with no CFT input, the ground-state-energy criterion locates the critical coupling to within half a percent of a density matrix renormalization group value obtained on systems more than twice the size, and maps the critical line of the model across the coupling plane. Ground-state criteria locate the critical line robustly, but the point they select along it is weakly determined, and the computed dimensions come closest to the bootstrap elsewhere along the line.",
+      "published": "2026-09-10T15:08:58Z",
+      "updated": "2026-09-10T15:08:58Z",
       "categories": [
         "cond-mat.str-el",
-        "cond-mat.dis-nn",
+        "cond-mat.stat-mech",
+        "hep-th"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11675v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11675v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11668v1",
+      "title": "Nonlinear dynamics and mechanical frequency combs with a Meissner-levitated micromagnet",
+      "authors": [
+        "Yiqi Wang",
+        "Trisha Madhavan",
+        "Vanessa Wachter",
+        "J. DaLi Schaefer",
+        "Addison NewRingeisen",
+        "Zhiyuan Wei",
+        "Frankie Fung",
+        "Benjamin A. Stickler",
+        "Mikhail D. Lukin"
+      ],
+      "summary": "Nonlinearities in multimode mechanical systems can give rise to rich dynamical phenomena with great potential for sensing applications and for future quantum experiments. We demonstrate that the coupled center-of-mass and rotational motion of a Meissner-levitated micromagnet offer a promising platform for nonlinear dynamics, combining low dissipation, magnetic tunability, strong intrinsic Duffing nonlinearities, and nonlinear intermodal couplings. We use this tunability to demonstrate the generation of a mechanical frequency comb in the micromagnet dynamics, realized by parametric excitation of two translational modes followed by cascaded nonlinear frequency mixing, which produces a phononic comb with tunable spacing. At large amplitudes, nonlinear coupling to a low-frequency librational mode of the magnet leads to parametric excitation and phase locking of that mode, generating a dense spectral fine structure at subharmonics of the drive. These results establish levitated micromagnets as a platform for nonlinear multimode mechanics, with potential applications in precision sensing and quantum-limited metrology.",
+      "published": "2026-09-10T15:06:31Z",
+      "updated": "2026-09-10T15:06:31Z",
+      "categories": [
+        "quant-ph",
+        "cond-mat.mes-hall",
+        "nlin.CD"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11668v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11668v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11666v1",
+      "title": "Competition between vacancy creation and filling in defect-engineering of hBN",
+      "authors": [
+        "Shrirang Chokappa",
+        "Manuel Laängle",
+        "Barbara Maria Mayer",
+        "Vladimir Zoba\\vc",
+        "Jacob Madsen",
+        "Diana Propst",
+        "David Lamprecht",
+        "Philipp Irschik",
+        "Arixin Bo",
+        "Clara Kofler",
+        "Vinzent Hana",
+        "Fabian Kraft",
+        "Clemens Mangler",
+        "Lado Filipovic",
+        "Toma Susi",
+        "Jani Kotakoski"
+      ],
+      "summary": "Hexagonal boron nitride (hBN) has recently become the focus of intense research as a material that can host quantum emitters. It is known that such emission is related to point defects, but in order to conclusively correlate specific defects to their spectra, having control over the defect creation mechanism is required. Here, we prepare freestanding, monolayer hBN samples and irradiate them with ultra-low-energy (150 eV) Ar+ ions. The samples are characterized before and after irradiation via scanning transmission electron microscopy to assess the defect density and distribution. Contrary to what analytical potential molecular dynamics simulations have predicted, we predominantly observe boron single vacancies after ion irradiation, followed by double vacancies at half the count. Moreover, we also observe that vacancy filling with Si and C impurity atoms plays a more significant role in the created defects than previously assumed, potentially posing a problem for selective creation of quantum emitters in hBN.",
+      "published": "2026-09-10T15:04:41Z",
+      "updated": "2026-09-10T15:04:41Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11666v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11666v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11640v1",
+      "title": "High-throughput thermodynamic screening of oxide-scale adhesion across the CoCrFeMnNiAl high-entropy alloys",
+      "authors": [
+        "Dennis Boakye",
+        "Chuang Deng"
+      ],
+      "summary": "One significant benefit of reactive element (RE) additions is the colossal improvement in oxide-scale retention during high-temperature oxidation. Selecting optimal RE dopants in high-entropy alloys remains empirical because the relevant thermodynamic landscape is inaccessible to first-principles at the required compositional resolution. Here we apply the macroscopic atom model, coupled with McLean isotherm and Guttmann models, to screen adhesion across nine CoCrFeMnNiAl sub-families at \\ce{Cr2O3} and \\ce{Al2O3} interfaces, ranking five REs (Hf, Y, Zr, La, Ti) for segregation, adhesion enhancement, and sulfur displacement. The screening reveals an oxide-dependent ranking inversion, with Hf dominating at \\ce{Cr2O3} and La dominating at \\ce{Al2O3}, driven by the interplay between RE--O and RE--matrix interaction enthalpies. Mn-containing alloys exhibit intrinsic sulfur resistance, consistent with their experimentally observed oxidation characteristics. A sulfur immunity phase diagram identifies compositions with Al~+~Mn~$\\gtrsim$~25~at\\% as thermodynamically immune to S-induced adhesion loss. All crossover concentrations collapse onto a universal exponential governed by the segregation enthalpy difference, providing a transferable design rule. Inverse design identifies \\ce{Co16Cr16Fe16Ni16Al35} as the optimal S-immune composition with $W_\\text{sep} = 5.95$~J/m$^2$ without RE doping.",
+      "published": "2026-09-10T14:46:51Z",
+      "updated": "2026-09-10T14:46:51Z",
+      "categories": [
         "cond-mat.mtrl-sci"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10186v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10186v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11640v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11640v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10165v1",
-      "title": "Stable, Compact, and Direct Ghost-Cell Reconstruction: A Non-Iterative Approach for Embedded-Boundary Methods",
+      "arxivID": "2609.11633v1",
+      "title": "Phase-Controlled Majorana Zero Modes in Altermagnetic Topological-Insulator Josephson Junctions",
       "authors": [
-        "Narsimha Reddy Rapaka",
-        "Pankaj Jagad",
-        "Yacine Addad",
-        "Mohamed Kamel Riahi"
+        "Hao Dong",
+        "Xun-Jiang Luo",
+        "Xiao-Hong Pan",
+        "Xin Liu"
       ],
-      "summary": "A direct, analytical, non-iterative ghost-cell reconstruction framework is developed for Cartesian-grid embedded-boundary methods. Analytical expressions impose Dirichlet and Neumann boundary conditions directly at the embedded boundary, eliminating intermediate image-point reconstruction, matrix inversion, and precomputation or storage of geometry-dependent reconstruction weights. For the Cartesian stencil considered, dependencies among neighboring ghost cells form a directed acyclic graph. A topological ordering partitions ghost cells into dependency levels, permitting level-by-level reconstruction without iterative updates. The formulation is combined with hybrid ghost cells (HGC), whose centers may lie on either side of the embedded boundary. This placement satisfies the linear reconstruction-stability criterion previously derived for scalar advection while retaining a compact nearest-neighbour Cartesian stencil. An extended-stencil classical ghost-cell formulation (CGC_ES) serves as a stability-preserving reference, distinguishing the effects of reconstruction stability and stencil compactness. The same analytical relations provide solution values and spatial gradients directly on the embedded boundary, enabling evaluation of pressure forces, wall stresses, drag, and lift without separate surface reconstruction or filtering. Simulations of flow past a circular cylinder and an airfoil show that the linear criterion remains a useful indicator of reconstruction stability for the nonlinear incompressible Navier-Stokes cases considered. Classical ghost-cell reconstruction develops spurious oscillations when the criterion is violated, whereas CGC_ES and HGC remain stable. HGC additionally satisfies the stability requirement with a compact nearest-neighbour stencil.",
-      "published": "2026-09-09T13:38:54Z",
-      "updated": "2026-09-09T13:38:54Z",
+      "summary": "We exploit facet-dependent Andreev phase shifts to control topological superconductivity with a phase bias in a three-dimensional altermagnetic topological-insulator Josephson junction. In the weak link between two conventional s-wave superconductors, the d-wave altermagnetic order produces facet-dependent momentum shifts of the surface Dirac cones. The resulting net momentum of the states involved in Andreev reflection generates additional propagation phases that differ between facets. Consequently, the facet-resolved Andreev spectra exhibit gap closings at distinct phase biases, giving rise to topological superconducting regimes that host Majorana zero modes(MZMs). We further show that tuning the phase bias controls the spatial localization of these modes. The associated topological superconducting transitions are only weakly affected by moderate variations in the chemical potential, obviating the need for fine-tuning to the Dirac point. Our results establish a platform for realizing and spatially controlling MZMs by tuning the superconducting phase bias in altermagnetic topological-insulator Josephson junctions.",
+      "published": "2026-09-10T14:42:26Z",
+      "updated": "2026-09-10T14:42:26Z",
       "categories": [
-        "physics.flu-dyn",
+        "cond-mat.mes-hall",
+        "cond-mat.supr-con"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11633v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11633v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11602v1",
+      "title": "Breaking Water at Graphene Defects",
+      "authors": [
+        "Samuel G. H. Brookes",
+        "IniOluwa C. Popoola",
+        "Fabian Berger",
+        "Kara D. Fong",
+        "Angelos Michaelides",
+        "Christoph Schran"
+      ],
+      "summary": "Water dissociation at solid surfaces underpins processes ranging from corrosion and catalysis to electrochemistry and photovoltaics. Defects often serve as reactive sites for dissociation, yet how solvation influences water dissociation at such sites remains poorly understood. Here, we use state-of-the-art machine-learned interatomic potentials to explore water dissociation at defective graphene-water interfaces. We show that solvation qualitatively changes the reaction mechanism at a graphene single vacancy (SV), opening pathways that are absent for an isolated water molecule. Whereas the gas-phase process proceeds via a single concerted channel, the solvated SV splits water through two competing pathways: a basic route forming SV-H and OH-(aq), and an acidic route forming SV-OH and H3O+(aq). These lower-barrier pathways produce distinct chemisorbed intermediates that enhance graphene-water adsorption. Accordingly, even a simple carbon vacancy gives rise to unexpectedly rich interfacial chemistry, coupling surface chemistry to interfacial charge and wettability, with implications for carbon functionalization and nanofluidic transport.",
+      "published": "2026-09-10T14:23:30Z",
+      "updated": "2026-09-10T14:23:30Z",
+      "categories": [
+        "physics.chem-ph",
+        "cond-mat.mtrl-sci"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11602v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11602v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11591v1",
+      "title": "Robust Spin-1 Haldane Topology under Itinerant Doping",
+      "authors": [
+        "Satoshi Nishimoto"
+      ],
+      "summary": "We study itinerant hole doping of the spin-$1$ Haldane symmetry-protected topological (SPT) phase in two $t$--$J$ chains coupled by ferromagnetic (FM) Hund exchange. Density-matrix renormalization group calculations show that string order, a finite spin gap, and the Haldane entanglement structure coexist over a broad doping range. Combined with entanglement-entropy scaling consistent with a single gapless charge mode, these results support a metallic doped Haldane SPT with a $C1S0$ low-energy description. At low doping, short-range charge correlations reduce the density of spin-$1/2$ defect rungs, whereas at larger doping their positions become nearly uncorrelated while their spins are collectively incorporated into the correlated spin sector. The doped Haldane SPT terminates in a fully spin-polarized FM phase, which forms a reentrant pocket at high doping in the global phase diagram. Dilute-limit analyses trace the two FM boundaries to spin--charge factorization at weak Hund coupling and to rung-triplet binding with reduced pair mobility at strong Hund coupling. Our results show how mobile carriers reorganize the Haldane spin structure while preserving its characteristic signatures.",
+      "published": "2026-09-10T14:19:59Z",
+      "updated": "2026-09-10T14:19:59Z",
+      "categories": [
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11591v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11591v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11571v1",
+      "title": "Effect of Stress and Surface Roughness on Electrodeposition in All-Solid-State Batteries: A Computational Investigation",
+      "authors": [
+        "Kaniza Islam",
+        "Ayush Morchhale",
+        "Jung-Hyun Kim",
+        "Yanzhou Ji",
+        "Noriko Katsube"
+      ],
+      "summary": "All-solid-state batteries (ASSBs) promise high energy density and enhanced safety, but their development is hindered by instability and incompatibility at solid-solid interfaces. In Li-metal ASSBs, lithium penetration occurs despite stiff ceramic electrolytes via grain boundaries, often initiated by minor Li/SE interfacial irregularities. Here we introduce a two-dimensional continuum model with electro-chemo-mechanical coupling to investigate interfacial current distribution in Li ASSBs with surface-roughened argyrodite electrolyte under stack pressures and applied current density. Our theoretical analysis and simulation studies highlight the critical role of mechanical stress in interfacial current distribution. We find that prominent stress variations around elongated surface protrusions are the key to nonuniform Li deposition, without which Li deposition becomes uniform even on a rough surface. Moreover, our parametric study elucidates that stress effects dominate the overpotential and current distribution under low interfacial current density to exchange current density ratios, otherwise the high interfacial resistance due to surface-roughness-induced interfacial area becomes dominant. With these insights, we also discuss the potential of engineering artificial interlayers to modulate interfacial current distributions, offering guidance for improving the long-term performance and reliability of ASSBs.",
+      "published": "2026-09-10T14:06:05Z",
+      "updated": "2026-09-10T14:06:05Z",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11571v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11571v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11563v1",
+      "title": "kobra: a new Vlasov code intended for plasma-wall modeling",
+      "authors": [
+        "Sebastian Konewko",
+        "Nathan Maestracci",
+        "Sven Van Loo"
+      ],
+      "summary": "In a fusion device plasma-wall interactions \\edit{on the sheath scale} can be modeled as a collisionless problem. When modeling these regions particle-in-cell codes suffer from statistical error originating from undersampling the velocity space. On the other hand, Vlasov codes do not have this issue as they evolve the full distribution function. Here, we present a new finite-volume Vlasov code, kobra, equipped with adaptive-mesh refinement to reduce computational effort. Currently, the code solves the Vlasov-Poisson equations. We validate our code in 1d1v and 1d2v using established benchmarks, i.e. the two-stream instability, Landau damping, the Dory-Guest-Harris instability, and also a classical electrostatic plasma sheath. We find that the code reproduces the theoretical properties of these problems well. More importantly, the adaptive grid provides a computational gain that is likely to scale to higher dimensional, plasma-wall simulations.",
+      "published": "2026-09-10T13:53:44Z",
+      "updated": "2026-09-10T13:53:44Z",
+      "categories": [
+        "physics.plasm-ph",
         "physics.comp-ph"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10165v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10165v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11563v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11563v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10163v1",
-      "title": "Anizotropic Ising Model on 2D Kagomé Lattice as an Inhomogeneous XYZ Integrable Model",
+      "arxivID": "2609.11551v1",
+      "title": "Skyrmion nucleus resolves the Landauer paradox",
       "authors": [
-        "Shahane A. Khachatryan",
-        "Hrachya Babujian",
-        "Ara G. Sedrakyan"
+        "Jiyuan Yang",
+        "Denan Li",
+        "Shi Liu"
       ],
-      "summary": "We investigate a generalized inhomogeneous two-dimensional Ising model on the kagomé lattice with two alternating couplings $J_i$ and $J'_i$, $i=1,2,3$, along the three lattice directions. The local Boltzmann weights are mapped onto a non-symmetric eight-vertex $R$-matrix satisfying the free-fermion condition for arbitrary values of the six couplings. We analyze the Yang--Baxter structure for the cases $J'_i=J_i$ and $J'_i=-J_i$ and derive the corresponding one-dimensional quantum spin chains in the anisotropic limit. The first case yields a transverse-field Ising-type Hamiltonian, while the second leads to a modified chain with a graded permutation structure and shifted partition-function zeros. For a partially anisotropic model, we also obtain the free energy and specific heat.",
-      "published": "2026-09-09T13:38:42Z",
-      "updated": "2026-09-09T13:38:42Z",
+      "summary": "Ferroelectric switching is among the most fundamental and widely studied symmetry-breaking processes in physics. However, the Landauer paradox asserts that an ideal single-domain ferroelectric should be kinetically unswitchable, because a three-dimensional reversed nucleus would carry a prohibitive depolarization penalty, leading to unphysically large coercive field (the electric field required to switch the polarization). Here we show that this long-standing paradox is resolved by topology. In defect-free PbTiO3, large-scale molecular dynamics simulations reveal that the intrinsic critical nucleus is a three-dimensional polar skyrmion. Its continuous polarization rotation and Néel-type boundary walls self-compensate bound charge, suppressing the depolarization energy by orders of magnitude and bringing the predicted coercive field into agreement with experiment. This topological nucleus further overturns the 60-year-old Janovec-Kay-Dunn law. We derive an analytical thickness-dependent coercive-field law governed by field-induced softening of the parent ferroelectric state and controlled by a single material descriptor. This framework captures diverse experimental trends across ferroelectric families and recasts the Kay-Dunn exponent of -2/3 as an effective finite-window behavior. These results establish polar topology as an organizing principle for intrinsic switching and suggest that hidden topological transition states may broadly shape nonequilibrium phase transformations traditionally understood as Landau-type symmetry breaking.",
+      "published": "2026-09-10T13:44:09Z",
+      "updated": "2026-09-10T13:44:09Z",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11551v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11551v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11547v1",
+      "title": "Néel-Vector-Dependent Altermagnetic Spin Splitting in the One-Dimensional Limit",
+      "authors": [
+        "Xin Chen",
+        "Duo Wang"
+      ],
+      "summary": "Altermagnetism is normally identified by nonrelativistic spin-split bands in a compensated collinear magnet. Under one-dimensional confinement, however, this diagnostic can disappear: a boundary-compatible sublattice-exchange operation may leave the only Bloch momentum unchanged, forcing the nonrelativistic spin-up and spin-down spectra to coincide. We show that nonrelativistic spin degeneracy can coexist with relativistic spin splitting in a compensated one-dimensional magnet. In a Lieb-based construction, confinement along the diagonal cancels the projected $d$-wave spin splitting while preserving the real-space sublattice-exchange motif. Spin-orbit coupling (SOC) then locks spin to the lattice, so the Néel-vector orientation selects a magnetic line group that can reveal spin-split bands. Using fully compensated $[110]$ Ta$_2$TeSeO nanoribbons as a prototype, we find spin-degenerate nonrelativistic bands and sizable SOC splitting in the inherited easy-axis domain, $\\mathbf N\\parallel[100]$ or $[010]$. For sufficiently wide ribbons that retain the parent easy-axis order, this splitting is an equilibrium property. The easy-axis ribbon also supports a right-moving-mode spin polarization of about $35\\%$ at finite ideal conductance. Our results establish one-dimensional fully compensated altermagnetic functionality hidden inside apparently conventional antiferromagnetic bands.",
+      "published": "2026-09-10T13:41:51Z",
+      "updated": "2026-09-10T13:41:51Z",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11547v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11547v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11544v1",
+      "title": "Kinetic modeling of molecular beam formation in a cryogenic buffer-gas cell",
+      "authors": [
+        "Ekkehard Steinmacher",
+        "Phillip Groß",
+        "Franziska Tuttas",
+        "Marcel Pfeiffer",
+        "Tim Langen"
+      ],
+      "summary": "Cryogenic buffer-gas cells are widely used to produce cold molecular beams, but the microscopic dynamics governing beam formation remain challenging to model. Here we present fully kinetic simulations of a cryogenic buffer-gas cell using the Direct Simulation Monte Carlo method implemented in the PICLas framework, treating the buffer gas and ablated molecules within a single unified model. We capture characteristic features of cryogenic buffer-gas sources, including plume cooling, directed transport toward the aperture, and the formation of a slow molecular beam, while also resolving energy transfer from the hot ablation plume to the helium buffer gas that is inaccessible to existing approaches relying on the background-gas approximation. Our results demonstrate that fully kinetic simulations can provide detailed insights into buffer-gas cell dynamics and open a route toward a systematic optimization of such sources.",
+      "published": "2026-09-10T13:41:03Z",
+      "updated": "2026-09-10T13:41:03Z",
+      "categories": [
+        "physics.atom-ph",
+        "physics.chem-ph",
+        "physics.comp-ph"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11544v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11544v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11501v1",
+      "title": "Antimony for broadband nanophotonics across the ultraviolet, visible and infrared",
+      "authors": [
+        "Fernando Chacón-Sánchez",
+        "Jacek Wojcik",
+        "Marina García Pardo",
+        "Fátima Cabello",
+        "Peter Mascher",
+        "Fernando Agulló-Rueda",
+        "Rosalía Serna",
+        "Johann Toudert"
+      ],
+      "summary": "Semimetal elemental antimony (Sb) nanostructures show great potential for applications where nanophotonic properties play a key role, such as phase-change optical memories, non-linear optical elements, photothermal therapy agents, photodetectors and photocatalysts. However, designing advanced Sb-based photonic devices critically requires an accurate and reliable knowledge of the optical response of bulk and nanoscale Sb. Herein, we report for the first time a fully consistent and accurately measured dielectric function for Sb nanoscale films in a wide spectral range from the ultraviolet to the far infrared (4 - 0.04 eV, i.e. ~ 0.3 - 30 $μ$m), surpassing previous reports that explored a limited spectral range. It is found that the Sb spectral response is driven exclusively by giant interband transitions in the visible up to mid infrared (4 - 0.4 eV, i.e. ~ 0.3 - 3 $μ$m), and that their contribution dominates over that of free carriers down to 0.12 eV (i.e. ~ 10 $μ$m). Such spectral response enables Sb nanostructures to display spectrally selective and tunable nanophotonic resonances. First, we showcase interband plasmonic resonances in the visible-to-near infrared for Sb nanogratings. Second, we report giant refractive index dielectric resonances in the mid infrared for nanostructured Sb/dielectric/metal resonant cavities. These findings open a pathway to optimized planar Sb nanoscale designs enabling a tailored light-matter interaction, which will be useful for integrated data, telecom, medical, optoelectronic and energy conversion devices operating in a broad spectral range.",
+      "published": "2026-09-10T13:09:05Z",
+      "updated": "2026-09-10T13:09:05Z",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mtrl-sci"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11501v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11501v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11473v1",
+      "title": "Work as a function of protocol duration for the efficient erasure of an underdamped memory: isothermal to adiabatic transition",
+      "authors": [
+        "Nicolas Barros",
+        "Stephen Whitelam",
+        "Sergio Ciliberto",
+        "Ludovic Bellon"
+      ],
+      "summary": "We use evolutionary reinforcement learning to determine efficient time-dependent erasure protocols for an underdamped cantilever moving in a double-well potential, an experimental realization of a 1-bit memory. We investigate how the mean work $\\langle W \\rangle $ needed to erase a bit scales as a function of the protocol duration $τ$. We find two regimes, depending on how $τ$ compares to the relaxation time of the system $t_r$. For $τ\\gg t_r$, the quasistatic isothermal regime, we recover Landauer's bound plus an overhead that scales as $1/τ$, similar to the overdamped case. By contrast, for $τ<t_r$ erasure becomes adiabatic and $\\langle W \\rangle$ grows more slowly than in the isothermal case. This growth is bounded from below as $1/τ$, which we derive using a gedanken optimal protocol. Finally, comparison with overdamped erasure shows that learned protocols can outperform protocols that are optimal subject to equilibrium boundary conditions.",
+      "published": "2026-09-10T12:40:08Z",
+      "updated": "2026-09-10T12:40:08Z",
       "categories": [
         "cond-mat.stat-mech"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10163v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10163v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11473v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11473v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10131v1",
-      "title": "Reconfigurable field-free spin Hall nano-oscillators enabled by crystallographic anisotropy in epitaxial Co/Pt",
+      "arxivID": "2609.11466v1",
+      "title": "Topological band structure of excitons in octochlore KTb$_{3}$F$_{10}$: an analog of the Luttinger Semimetal",
       "authors": [
-        "Jong-Guk Choi",
-        "Avinash Kumar Chaurasiya",
-        "Jaimin Kang",
-        "Venkatesh Vadde",
-        "Peter G. Lim",
-        "Roman Khymyn",
-        "Ahmad A. Awad",
-        "Akash Kumar",
-        "Mark C. Hersam",
-        "Vinayak P. Dravid",
-        "Pedram Khalili Amiri",
-        "Johan Åkerman"
+        "Olivier Demortier",
+        "Françoise Damay",
+        "Paul McClarty",
+        "Stéphane Raymond",
+        "Jacques Ollivier",
+        "Sylvain Petit"
       ],
-      "summary": "Spin Hall nano-oscillators (SHNOs) are nanoscale microwave sources for wireless communication, neuromorphic computing and oscillator-based Ising machines, but conventional devices require a global magnetic bias. Here we replace this bias through crystallographic anisotropy in epitaxial Co/Pt. Growth of hcp Co with its c-axis in the film plane produces an anisotropy field of about 0.36 T and enables field-free auto-oscillations above 10 GHz in nanoconstriction SHNOs. The active current polarity is selected by the remanent magnetization, providing nonvolatile reconfiguration of the oscillation state. Micro-focused Brillouin light scattering confirms that the nonlinear response is confined to the nanoconstriction region. Lithographic control of the angle between the current and anisotropy axes tunes the excitation threshold and drives two spectral branches from separated modes to a dominant single branch, consistent with mutual synchronization. These results establish epitaxial crystallographic anisotropy as a route to reconfigurable field-free spintronic oscillators and oscillator networks.",
-      "published": "2026-09-09T13:08:43Z",
-      "updated": "2026-09-09T13:08:43Z",
+      "summary": "Understanding the symmetry and topology of band structures in crystalline solids has been among the defining themes of a generation of condensed matter physicists, with implications across many different platforms including electronic bands, photonic crystals, phonons and magnetic excitations. In the latter systems, there is usually magnetic long-range order and time reversal symmetry breaking. Here we further enrich the possible band structures available to magnetic systems by examining dispersive crystal field excitations above a ground state that is a simple product of singlets. In these systems, there is an interplay of magnetic interactions and band topology with both crystal and time reversal symmetries. Using high-resolution neutron spectroscopy we reveal the dispersion relations of bosonic excitons in KTb$_{3}$F$_{10}$, an experimental realization of the octochlore lattice. We show that there are pinch point features in the scattering intensity. The dominant coupling in this system is the long-range magnetostatic dipolar interaction, whose singularity at the zone center is passed onto the scattering intensity. However, the pinch points survive when the range of the dipoles is truncated to finite shell number in the form of a three-band quadratic band touching protected by cubic symmetry. This model, which is related to the Luttinger semi-metal, provides a general long wavelength model for the emergence of pinch point scattering intensity encompassing also the true long-range dipolar model.",
+      "published": "2026-09-10T12:36:36Z",
+      "updated": "2026-09-10T12:36:36Z",
       "categories": [
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11466v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11466v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11464v1",
+      "title": "A Community-Developed Domain Ontology for Magnetic Materials",
+      "authors": [
+        "Wilfried Hortschitz",
+        "Santa Pile",
+        "Claas Fillies",
+        "Harald Oezelt",
+        "Alexander Kovacs",
+        "Hans Fangohr",
+        "Samuel J. R. Holt",
+        "Martin Lang",
+        "Andrea Petrocchi",
+        "Swapneel Pathak",
+        "Michael P. Adams",
+        "Jonas Winkler",
+        "Thomas G. Woodcock",
+        "William Rigaut",
+        "Pierre Le Berre",
+        "Nora M. Dempsey",
+        "Alena Vishina",
+        "M. Nur Hasan",
+        "Georgia A. Marchant",
+        "Heike C. Herper",
+        "Thomas Schrefl"
+      ],
+      "summary": "Magnetic materials play a crucial role in energy-related technologies, mobility, and sensing, but their complex multiscale behaviour and the coexistence of multiple unit systems pose persistent challenges for data exchange and interpretation. This paper presents a domain ontology for magnetic materials, developed within the European Union funded Magnetic Multiscale Modelling Suite (MaMMoS) project and aligned with the Elementary Multiperspective Material Ontology (EMMO). The ontology formalises intrinsic, hysteretic, and microstructural properties across multiple length scales and supports semantic interoperability between simulation tools, databases, and experimental workflows. One key feature of the ontology is its code-based and human-readable structure, enabled through the EMMOntoPy framework, which allows for direct manipulation and versioning without relying on opaque .owl or .ttl files. This facilitates collaborative development and improves transparency. The ontology supports FAIR (Findable, Accessible, Interoperable, Reusable) principles and is openly available for extension by the community. The aim of the MaMMoS project is to foster reproducibility, improve traceability, and promote the adoption of ontology in the magnetism domain. The ontology that has been developed already serves as the foundation for multiple software tools that handle all kinds of magnetic material data.",
+      "published": "2026-09-10T12:35:32Z",
+      "updated": "2026-09-10T12:35:32Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.comp-ph"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11464v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11464v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11459v1",
+      "title": "Bottom-up Synthesis of Metastable 2D Hexagonal Copper(I) Iodide on Monolayer and within Bilayer Graphene",
+      "authors": [
+        "David Kaiser",
+        "Guobin Jia",
+        "Janis Köster",
+        "Sadegh Ghaderzadeh",
+        "Christian E. Halbig",
+        "Siegfried Eigler",
+        "Andrey Turchanin",
+        "Benjamin Dietzek-Ivanšić",
+        "Arkady V. Krasheninnikov",
+        "Jonathan Plentz",
+        "Elena Besley",
+        "Ute Kaiser"
+      ],
+      "summary": "Copper(I) iodide (CuI) is a wide-bandgap semiconductor crystallizing in the 3D $γ$-phase under ambient conditions; its layered van der Waals bulk phase $β$-CuI is stable only between 643 and 673 K. The two-dimensional (2D) h-CuI form has been obtained via liquid-phase exfoliation of mechanochemically prepared precursors and via encapsulation between graphene sheets, whereas bottom-up growth of 2D h-CuI on open surfaces has not yet been demonstrated. Here, we report a vapor-phase synthesis of h-CuI directly on low-defect, large-area monolayer and within bilayer reduced oxo-graphene (r-oxo-G) at low temperatures. Using a copper TEM grid as the solid-state precursor for copper, HI-vapor exposure at 40 $°$C initiates nucleation, while annealing at 180 $°$C promotes the growth of extended h-CuI domains. Aberration-corrected HRTEM resolves the atomic structure, local twist angles, and lattice anisotropy of the CuI/r-oxo-G nanohybrid, while STEM-EDX yields a Cu:I ratio consistent with 1:1. First-principles calculations show that van der Waals adhesion to graphene stabilizes the supported hexagonal layer. Under the presented low-temperature precursor conditions, pathways for nucleation of the $γ$-phase are not available, allowing the hexagonal phase to form selectively at the graphene interface. Ab initio molecular dynamics simulations show that the heterostructure retains its hexagonal lattice order at 600 K, including on an open monolayer graphene support. The lateral extent of the growth is limited mainly by remaining interfacial adsorbates. These results establish a route to metastable 2D h-CuI on a chemically inert graphene template, which may be useful for wide-bandgap electronic and optoelectronic devices.",
+      "published": "2026-09-10T12:32:32Z",
+      "updated": "2026-09-10T12:32:32Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
         "cond-mat.mes-hall",
         "physics.app-ph"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10131v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10131v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11459v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11459v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10106v1",
-      "title": "Infinite ergodic theory and functional statistics of non-confined Feller process",
+      "arxivID": "2609.11457v1",
+      "title": "Local decoders for fault-tolerant quantum computation and translation-invariant stabilizer codes",
       "authors": [
-        "Vicenç Méndez"
+        "Nathaniel Selub",
+        "Aditya Bhardwaj",
+        "Ethan Lake"
       ],
-      "summary": "We study additive observables of a non-confined Feller process characterized by a non- normalizable stationary probability density and return times with infinite mean. The process is equivalent, after a deterministic rescaling, to a squared Bessel process, but we focus here on a question: the spatial structure of its local-time field. We show that the local time admits a fac- torization in the long time limit. Its spatial profile is governed by the non-normalizable stationary density, whereas its temporal fluctuations are controlled by a single Mittag-Leffler random ampli- tude. As a consequence, normalized spatial correlations of the local time converge to a universal constant independent of the two observation levels. Occupation times of finite intervals follow as corollaries and display Darling-Kac fluctuations. In contrast, non-integrable power observables exhibit self-similar squared-Bessel-type limits rather than Mittag-Leffler statistics. This spatial- field perspective provides a unifying framework for infinite ergodic theory under state-dependent multiplicative noise.",
-      "published": "2026-09-09T12:37:52Z",
-      "updated": "2026-09-09T12:37:52Z",
+      "summary": "We construct the first fully spatially local fault-tolerant quantum computer based on topological codes in fewer than four spatial dimensions. Our construction is a two-dimensional architecture that uses only geometrically local quantum and classical operations, bounded-speed classical communication and computation, and a constant density of quantum and classical resources. The core component is a new time-translation-invariant cellular-automaton decoder for the surface code. This decoder preserves logical information for a time stretched-exponential in the code distance and operates continuously during state injection, stabilizer-state preparation, lattice surgery, and transversal readout. We also prove that every translation-invariant topological Pauli stabilizer code is locally decodable under phenomenological noise.",
+      "published": "2026-09-10T12:29:05Z",
+      "updated": "2026-09-10T12:29:05Z",
       "categories": [
+        "quant-ph",
         "cond-mat.stat-mech",
-        "math.PR"
+        "nlin.CG"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10106v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10106v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11457v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11457v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10081v1",
-      "title": "Observation of Magnetic-Anisotropy Crossover and High-Temperature Skyrmions in the Dirac Magnet Fe3Ge with a Distorted Kagome Lattice",
+      "arxivID": "2609.11441v1",
+      "title": "Vacancy Order and Physical Properties of a Ternary Compound Fe0.68Pd0.80Te with an α-Fe1+xTe-Type Structure",
       "authors": [
-        "Yalei Huang",
-        "Xiaowei Lv",
-        "Bin Li",
-        "Chunqiang Xu",
-        "Dhanarajagopal Alltrin",
-        "Xiaoxuan Ma",
-        "Wanting Yang",
-        "Wei Zhou",
-        "Xiangzhuo Xing",
-        "Wen-Chin Lin",
-        "Raman Sankar",
-        "Michael Smidman",
-        "Shixun Cao",
-        "Dong Qian",
-        "Renchao Che",
-        "Xiaofeng Xu"
+        "Bingxian Shi",
+        "Manyu Wang",
+        "Chenglin Shang",
+        "Yanyan Geng",
+        "Yangyang Fan",
+        "Xiaoxiao Pei",
+        "Li Huang",
+        "Daye Xu",
+        "Juanjuan Liu",
+        "Jinchen Wang",
+        "Hongxia Zhang",
+        "Hongliang Wang",
+        "Lijie Hao",
+        "Rui Xu",
+        "Zhongyi Lu",
+        "Zhihai Cheng",
+        "Peng Cheng"
       ],
-      "summary": "Topological materials that simultaneously host robust high-temperature skyrmions and nontrivial electronic band structures have attracted tremendous interest owing to their distinctive advantages for both fundamental research and prospective technological applications. Here, we report the observation of robust skyrmions in the Dirac kagome magnet Fe3Ge, which exhibits a high Curie temperature of ~ 650 K. At room temperature, Fe3Ge shows a large intrinsic anomalous Hall conductivity of ~ 380 Ω-1cm-1, originating from its nontrivial electronic band topology. Systematic magnetization measurements reveal a spin reorientation transition at ~ 375 K, indicating a crossover from easy-plane to easy-axis magnetic anisotropy. Below the spin reorientation temperature, a large topological Hall effect is observed, arising from microscopic noncoplanar spin structures. Lorentz transmission electron microscopy shows that mesoscopic skyrmions are stabilized in the easy-axis magnetic anisotropy regime and persist over an exceptionally wide temperature window of 375-650 K, far exceeding that of most previously reported skyrmion-hosting materials. These results establish Fe3Ge as a promising platform for exploring diverse topological properties, with strong potential for advancing future high-temperature spintronic applications, ranging from next-generation information storage to logic computing devices.",
-      "published": "2026-09-09T12:05:00Z",
-      "updated": "2026-09-09T12:05:00Z",
+      "summary": "We report the identification and characterization of a new compound Fe0.68Pd0.80Te with an α-Fe1+xTe prototype structure. Different from the Fe-square net and minor occupancy of interstitial Fe-sites in Fe1+xTe, Fe0.68Pd0.80Te is featured by a Pdsquare net and near 68% occupancy of the corresponding interstitial Fe-sites. Furthermore, noncontact atomic force microscopy and X-ray diffraction provide evidence for the existence of a 3*3*3 Pd-vacancy order in this layered material. A spin-glass ground state below Tg 40 K is identified via magnetic characterization. Electrical transport measurements show that Fe0.68Pd0.80Te is a semiconductor with a very small band gap below 10 meV. It has weak negative magnetoresistance and holelike charge carriers below room temperature. Our results demonstrate its potentials for further exploring various quantum phenomena.",
+      "published": "2026-09-10T12:11:38Z",
+      "updated": "2026-09-10T12:11:38Z",
       "categories": [
         "cond-mat.mtrl-sci",
-        "cond-mat.str-el"
+        "cond-mat.mes-hall",
+        "cond-mat.str-el",
+        "cond-mat.supr-con"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10081v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10081v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11441v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11441v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10076v1",
-      "title": "Expanding RCWA capabilities with advanced S-matrix algorithms",
+      "arxivID": "2609.11419v1",
+      "title": "Anisotropy of Ultrafast Strain in $V_2O_3$ Thin Films: Out-of-Equilibrium Phase Transitions under Interfacial Clamping",
       "authors": [
-        "Philippe Lalanne",
-        "Jean-Paul Hugonin"
+        "J. Guzman-Brambila",
+        "R. Mandal",
+        "D. Lea",
+        "E. Trzop",
+        "M. Servol",
+        "J. C. Ekström",
+        "F. Pawula",
+        "J. Tranchant",
+        "L. Cario",
+        "M. Lorenc",
+        "E. Janod",
+        "C. Mariette"
       ],
-      "summary": "Modal methods are particularly well suited to layered photonic structures because electromagnetic propagation within each layer is described analytically. Here, we introduce a simple reformulation of the scattering-matrix (S-matrix) approach in which the S-matrix is defined as an intrinsic property of an individual layer, independently of its neighboring interfaces. This separation between layer propagation and interface coupling preserves the numerical stability of the conventional S-matrix formalism while providing a more modular description of multilayer structures. It also enables direct computation of the scattering coefficients between external plane waves and Bloch modes, as well as between Bloch modes themselves, providing generalized Fresnel coefficients for periodic interfaces. In addition, the reformulation allows the optical response to be evaluated simultaneously for many layer thicknesses or incident wavevectors, with only a modest computational overhead compared with a single calculation. Implemented in the RETICOLO freeware, these capabilities provide a practical framework for modal analysis, parameter sweeps, and the design of layered photonic structures.",
-      "published": "2026-09-09T12:00:29Z",
-      "updated": "2026-09-09T12:00:29Z",
+      "summary": "Ultrafast photoinduced insulator-to-metal transitions in correlated materials are often mediated by lattice distortions, yet the role of interfacial lattice constraints in shaping nonequilibrium pathways remains largely unexplored. We use azimuth-resolved time-resolved X-ray diffraction to track orientation-dependent strain dynamics in granular V$_2$O$_3$ thin films on c-cut sapphire, where thermal-expansion mismatch imposes anisotropic interfacial strain. Across the thermal transition, the azimuthal profile of the (110)$_H$ strain inverts curvature, providing direct evidence of partial clamping of the hexagonal basal-plane lattice (a$_H$,b$_H$). After photoexcitation of the antiferromagnetic insulating phase, the structural response remains clamp-limited: weakly constrained grain families reach the full basal-plane contraction characteristic of the metallic-like state, whereas strongly constrained families exhibit a strongly reduced distortion. Fluence-dependent measurements further disentangle transformed fraction from clamping-limited lattice distortion. Our results show that interfacial clamping acts as a static selector for ultrafast phase switching and provide a general route to quantify anisotropic strain dynamics in heterostructures.",
+      "published": "2026-09-10T11:48:36Z",
+      "updated": "2026-09-10T11:48:36Z",
       "categories": [
-        "physics.optics",
+        "cond-mat.mtrl-sci"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11419v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11419v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11417v1",
+      "title": "Gauss Law, Monodromy Defect, Magnetic Lattice Translation, and Lattice Duality",
+      "authors": [
+        "Pengcheng Wei",
+        "Yunqin Zheng"
+      ],
+      "summary": "In a Hamiltonian lattice gauge theory, the physical Hilbert space is fixed by the Gauss law, by choosing an eigenspace of the Gauss law operator which generates the gauge transformation. Choosing a non-trivial eigenspace is referred to as the modified Gauss law. In 2+1d dynamical U(1) pure gauge theory, we show that these physical Hilbert spaces are defect Hilbert spaces associated with non-topological monodromy defects for monopole operators and topological defects for U(1) 1-form symmetry, inserted along the time direction. We also construct the corresponding lattice translation operators. Under a nontrivially modified Gauss law, these translations obey a magnetic translation algebra. Finally, we discuss how the modified Gauss laws are manifested in 2+1d compact bosons, via exact duality on the lattice.",
+      "published": "2026-09-10T11:48:19Z",
+      "updated": "2026-09-10T11:48:19Z",
+      "categories": [
+        "hep-th",
+        "cond-mat.str-el"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11417v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11417v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11415v1",
+      "title": "Rare-History Transitions in Temporally Random Integrable Quantum Circuits",
+      "authors": [
+        "Tingfei Li",
+        "Jie Gu"
+      ],
+      "summary": "We study current fluctuations in a temporally random integrable quantum circuit. Commutativity reduces every drive history exactly to its layer composition, turning annealed fluctuations into a competition between current gain and the large-deviation cost of rare compositions. For each fixed composition, homogeneous thermodynamic Bethe ansatz dressing supplemented by ballistic fluctuation theory yields the conditional current statistics. Their annealed large-deviation contraction predicts a first-order switch between two dominant history classes, terminating on a line of regular cusp endpoints. Finite-time analysis shows how the switch is rounded. Thus temporal randomness can act as an emergent order-parameter-like coordinate in trajectory space.",
+      "published": "2026-09-10T11:46:36Z",
+      "updated": "2026-09-10T11:46:36Z",
+      "categories": [
+        "cond-mat.stat-mech",
+        "nlin.SI",
+        "quant-ph"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11415v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11415v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11405v1",
+      "title": "Instabilities in self-consistent diagrammatic approaches and how to cure them",
+      "authors": [
+        "Marcel Gievers",
+        "Herbert Eßl",
+        "Stefan Rohshap",
+        "Anna Kauch",
+        "Alessandro Toschi"
+      ],
+      "summary": "While self-consistent diagrammatic approaches are widely used to compute the physical properties of correlated quantum materials, their applicability may get severely hindered precisely in the parameter regions, where the most exciting physics is observed. One of the major issues, referred to as \"misleading convergence\", is the tendency of iterative schemes to converge to unphysical fixed points for intermediate-to-strong electronic interactions, regardless of numerical accuracy of the computation. Here, we explicitly verify that the origin of this problem in several established self-consistent many-electron approaches, defined in the general diagrammatic framework of the boson-exchange formalism, resides exclusively in the stability condition of the respective iteration schemes, and not in an intrinsic breakdown of their self-consistent diagrammatic description. This insight enables a simple and general remedy, as recently proposed in Phys. Rev. Lett. 137, 016502 (2026): The redefinition of the iterative procedure, by inverting the unstable eigendirections of the Jacobian associated to the fixed point of the self-consistent algorithm. We illustrate the successful outcome of this procedure by means of systematic calculations performed on testbed, exactly solvable, models. Our results demonstrate that the physical fixed point of the diagrammatic schemes we considered can be stabilized, de facto, across the entire parameter range, including the most challenging nonperturbative/strong-coupling regimes.",
+      "published": "2026-09-10T11:36:01Z",
+      "updated": "2026-09-10T11:36:01Z",
+      "categories": [
+        "cond-mat.str-el",
         "physics.comp-ph"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.10076v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10076v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11405v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11405v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.10062v1",
-      "title": "Non-equilibrium dissipative stabilization of s- and d-wave superconductivity",
+      "arxivID": "2609.11397v1",
+      "title": "Influence of magnetic fields on the performance of spin-orbit torque magnetic random-access memory",
       "authors": [
-        "Aleksey Lunkin",
-        "Yury Holubeu",
-        "Denis Golež",
-        "Zala Lenarčič"
+        "Jiaxin Liu",
+        "Yuqing Zhou",
+        "Guoyi Shi",
+        "Kaiming Cai"
       ],
-      "summary": "Stabilizing superconductivity beyond its equilibrium regime has been one of the quests of nonequilibrium state engineering. We report the presence of nonthermal pairing gap in BCS superconductors coupled to two thermal baths, where one of the baths can be at a temperature well above the equilibrium $T_c$. Superconducting state is enabled by a highly non-equilibrium steady state stabilized by weak coupling to baths that break detailed balance condition. The steady-state is well described by a generalized Gibbs ensemble parametrized with chemical potentials for associated Bogoliubov quasiparticle. A strong, non-perturbative effect is reported for both $s$-wave and $d$-wave superconductors, and its possible realization in cavity-based experiments is discussed.",
-      "published": "2026-09-09T11:37:04Z",
-      "updated": "2026-09-09T11:37:04Z",
+      "summary": "Spin-orbit torque magnetic random-access memory (SOT-MRAM) offers high speed, ultrahigh endurance, and compatibility with advanced semiconductor processes, making it a promising candidate for next-generation nonvolatile memory. However, intrinsic bias fields in magnetic tunnel junctions (MTJs), originating from reference-layer stray fields and interlayer coupling, cause asymmetric critical switching currents and increased energy consumption. Existing compensation approaches usually introduce additional magnetic layers into the MTJ stack, which increases fabrication complexity and limits wafer-scale integration. Here, we propose a bias-compensation strategy without modifying the MTJ stack by engineering local stray magnetic fields through magnetic filling materials in vertical interconnect access (VIA) channels during the back-end-of-line process. Micromagnetic simulations show that the proposed magnetic filling layer can provide the required auxiliary field for deterministic switching and significantly suppress write-current asymmetry. By optimizing the MTJ position relative to the magnetic filling structure, the write-current bias ratio is reduced from 21.6% in the conventional design to 1.3%. The approach is also applicable to in-plane magnetic anisotropy SOT-MTJs, reducing the bias ratio from 19.8% to -0.2%. Scaling analysis further demonstrates that the compensation effect remains effective when the device size is reduced to 20% of the original dimension (MTJ diameter approximately 10 nm), indicating its potential for high-density SOT-MRAM integration.",
+      "published": "2026-09-10T11:31:50Z",
+      "updated": "2026-09-10T11:31:50Z",
       "categories": [
-        "cond-mat.str-el",
-        "cond-mat.supr-con",
-        "quant-ph"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10062v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10062v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10014v1",
-      "title": "Effect of Spherical Confinement on the 2-TIPS of Soft Repulsive Spherocylinders",
-      "authors": [
-        "Jaydeep Mandal",
-        "Chandan Dasgupta",
-        "Prabal K. Maiti"
-      ],
-      "summary": "We studied the 2-Temperature induced phase separation (2-TIPS) in a system of soft repulsive sphe rocylinders (SRS), confined on the surface of a sphere. We used two different anchoring conditions for the SRS on the spherical surface- free and tangential. For the free anchoring, increasing either the packing fraction or the rod aspect ratio suppresses phase separation between the active and passive subsystems, and the system corresponds to a dense-dilute phase co-existence. These phenomena can be explained via the trapping effect and are emergent due to the confinement. For the tangential anchoring, the system phase separates from its initial isotropic state into a locally ordered dense region and a disordered dilute region. Our work provides useful insights into phase separation in binary mixtures under spherical confinement.",
-      "published": "2026-09-09T10:45:30Z",
-      "updated": "2026-09-09T10:45:30Z",
-      "categories": [
-        "cond-mat.soft",
-        "cond-mat.stat-mech"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10014v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10014v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10012v1",
-      "title": "An Explainable Machine Learning Framework for Predicting Blood-Brain Barrier Permeability Using Molecular Descriptors",
-      "authors": [
-        "Fatemeh Mahmoudi"
-      ],
-      "summary": "Blood-brain barrier (BBB) permeability is a critical determinant in the development of central nervous system therapeutics because it directly influences the ability of drug candidates to reach their target sites within the brain. In this study, an explainable machine learning framework was developed to predict BBB permeability using molecular descriptors generated from the MoleculeNet BBBP dataset with the RDKit cheminformatics toolkit. Fifteen physicochemical descriptors extracted from 2,039 compounds were used to train four supervised machine learning algorithms, including Logistic Regression, Support Vector Machine (SVM), Random Forest, and Extreme Gradient Boosting (XGBoost). Hyperparameter optimization was performed using GridSearchCV, while model interpretability was investigated using SHapley Additive exPlanations (SHAP). Among the evaluated models, the optimized XGBoost classifier achieved the best predictive performance, with an accuracy of 88.97%, a precision of 88.92%, a recall of 97.76%, an F1-score of 93.13%, and a ROC-AUC of 0.9282. Stratified five-fold cross-validation further demonstrated the robustness of the proposed model, yielding a mean ROC-AUC of 0.8982 +/- 0.0130. Feature importance and SHAP analyses consistently identified TPSA, HBD, and LogP as the most influential molecular descriptors governing BBB permeability prediction. Overall, the proposed framework provides an accurate, interpretable, and computationally efficient approach for BBB permeability prediction and may serve as a valuable tool for the early-stage screening of CNS drug candidates.",
-      "published": "2026-09-09T10:42:56Z",
-      "updated": "2026-09-09T10:42:56Z",
-      "categories": [
-        "cs.LG",
-        "cond-mat.mtrl-sci"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10012v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10012v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.10006v1",
-      "title": "Signature of Short-Range Order in Static Response of the Three-Dimensional Electron Gas",
-      "authors": [
-        "Muhammed H. Güneş",
-        "Yubo Yang",
-        "Vitaly Gorelov",
-        "Miguel A. Morales",
-        "Matteo Gatti",
-        "Lucia Reining",
-        "Shiwei Zhang"
-      ],
-      "summary": "The three-dimensional electron gas is a fundamental model in condensed matter physics and quantum chemistry, and the exchange-correlation energy derived from it serves as the starting point of \\textit{ab initio} computations of materials. However, the wave-vector-dependent response, and hence the static local field factor $G(q)$, has remained without accurate ground-state benchmark in the strongly coupled regime for three decades. Using diffusion Monte Carlo, we calculate $G(q)$ and the static density-density response function across the liquid phase and find a pronounced structure in $G(q)$ at intermediate wave vectors, already visible at metallic densities and growing with increasing interaction strength. We identify it as a fingerprint of short-range order by showing that it is required to reproduce the static structure factor. Our parametrization, valid in the entire liquid phase, predicts a low-energy resonant mode inside the particle-hole continuum.",
-      "published": "2026-09-09T10:37:35Z",
-      "updated": "2026-09-09T10:37:35Z",
-      "categories": [
-        "physics.comp-ph",
-        "cond-mat.str-el"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.10006v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.10006v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.09996v1",
-      "title": "SIM-GRAPH: A universal guide to symmetric interactions",
-      "authors": [
-        "R. C. Verstraten",
-        "C. Morais Smith"
-      ],
-      "summary": "Symmetry plays a central role throughout physics, from Fourier analysis on discrete lattices to the classification of elementary particles in the standard model. In finite quantum systems, symmetries are often discrete, such as reflection and rotational symmetries. Here, we present the SIM-GRAPH method (Symmetric Ising Models - Graph Reduction And Projected Hamiltonians), which uses such symmetries to efficiently calculate ground-state observables of interacting quantum systems. By projecting all interactions onto a symmetric subset of the system, the method effectively reduces the number of sites, thus providing an exponential speedup over standard exact diagonalization. Furthermore, we introduce two extensions that broaden the applicability of the method and allow for a controlled trade-off between computational cost and accuracy.",
-      "published": "2026-09-09T10:20:58Z",
-      "updated": "2026-09-09T10:20:58Z",
-      "categories": [
-        "cond-mat.str-el",
-        "quant-ph"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.09996v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09996v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.09988v1",
-      "title": "Efficient protocol for the Markovian Mpemba effect in $N$-level systems",
-      "authors": [
-        "David Gelbwaser-Klimovsky"
-      ],
-      "summary": "The Mpemba effect is an anomalous phenomenon in which the time to thermalize does not depend monotonically on the distance from equilibrium, allowing systems with an initially larger temperature difference to thermalize before those with a smaller one. The rarity of the effect makes it hard to find parameters that produce it, complicating the design of experiments and the development of applications. Here, we find necessary and sufficient conditions for the Markovian Mpemba effect in three-level systems and explain its underlying physical mechanisms. Based on our understanding of the three-level case, we develop an efficient algorithm to determine the parameters for the effect in $N$-level systems. This protocol could open the door for the realization of Mpemba experiments and related applications in large systems.",
-      "published": "2026-09-09T10:15:30Z",
-      "updated": "2026-09-09T10:15:30Z",
-      "categories": [
-        "cond-mat.stat-mech"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.09988v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09988v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.09979v1",
-      "title": "Thermodynamic and Statistical Signatures of Modality Changes in Concentration Distributions Driven by Stochastic Switching Between Two Activity States",
-      "authors": [
-        "Aindrila Deb",
-        "Pintu Patra"
-      ],
-      "summary": "Stochastic switching between gene expression states, coupled with production and degradation dynamics, governs the accumulation of mRNA and proteins in cells. The concentrations of these accumulated entities dictate the phenotypic distribution of genetically identical cells. The underlying accumulation dynamics are well-captured by a two-state promoter switching model, with statistical and thermodynamic properties quantified via the Fano factor and entropy production rates. However, how these measures correlate with concentration distributions and their shifts under varying kinetic parameters remains largely unexplored. To this end, we use chemical master equations to study a generalized model of mRNA accumulation dynamics in the presence of stochastic switching between two activity states and state-dependent production and degradation rates. We derive exact expressions for the steady-state probability distribution and analytically compute the mean concentration, Fano factor, and entropy production rate (EPR). Simplifying these expressions, we identify contributions arising from stochastic switching rates and relaxation dynamics toward equilibrium in each activity state. Next, using our theoretical results, we characterize the variation in the Fano factor and EPR as a function of mean expression during modality changes of the distributions mediated by the variation of switching rates. We also identify the conditions in kinetic parameters that achieve the highest Fano factor and entropy production rates. Our findings establish a generalized framework for examining stochastic accumulation dynamics, clarifying how kinetic parameters dictate molecular distributions, noise, and dissipation. These insights extend readily to broader contexts coupling stochastic switching with accumulation, including protein burst dynamics, phenotype-switching-mediated drug intake, and queuing theory.",
-      "published": "2026-09-09T10:06:59Z",
-      "updated": "2026-09-09T10:06:59Z",
-      "categories": [
-        "q-bio.MN",
-        "cond-mat.stat-mech"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.09979v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09979v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.09956v1",
-      "title": "Strong Impact of Halide Ordering on Structural Phase Transitions in Mixed Perovskites",
-      "authors": [
-        "Felix Uddén",
-        "Erik Fransson",
-        "Julia Wiktor",
-        "Benjamin M. Gallant",
-        "Dominik J. Kubicki",
-        "Paul Erhart"
-      ],
-      "summary": "Mixed halide perovskites are highly versatile semiconductors with applications in photovoltaics, light-emitting diodes, and photodetectors. Understanding their thermodynamic phase behavior is central to guiding compositional design and improving device stability. Here, we train machine-learned interatomic potentials (MLIPs) on density functional theory reference data for CsxRb1-xPbBr3yI3-3y, CsxRb1-xPbBr3yCl3-3y, and CsxRb1-xPbCl3yI3-3y halide perovskites, enabling large-scale hybrid Monte Carlo-molecular dynamics simulations that sample both configurational and vibrational degrees of freedom. All three binary halide systems exhibit a miscibility gap, the extent of which correlates with halide ion size mismatch. The gaps in Br-Cl and Br-I close at low temperatures, while the Cl-I gap extends above room temperature. At temperatures above the miscibility gap (200 K to 500 K), all systems show a tendency toward layered halide ordering, with halide species preferentially occupying apical or equatorial octahedral sites. In CsPbBr3yI3-3y, this ordering occurs in a device-relevant temperature regime and is linked to the structural phase transitions, shifting transition temperatures by up to 100 K relative to randomly mixed structures. We attribute the strongly non-linear composition dependence of the orthorhombic-tetragonal phase boundary observed experimentally (a linear decrease followed by a plateau) to halide ordering. Introducing Rb on the A-site weakens halide ordering and eliminates the non-linear behavior, while narrowing the miscibility gap in both the Br-I and Br-Cl systems. These results establish halide ordering as a key determinant of structural phase stability in mixed-halide perovskites.",
-      "published": "2026-09-09T09:45:59Z",
-      "updated": "2026-09-09T09:45:59Z",
-      "categories": [
-        "cond-mat.mtrl-sci"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.09956v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09956v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.09936v1",
-      "title": "Configurational-space separation and structure selection in three hard squares",
-      "authors": [
-        "Yuheng Yang",
-        "Meng Xiao",
-        "Duanduan Wan"
-      ],
-      "summary": "Self-assembly of hard particles with diverse shapes gives rise to a rich variety of structures through excluded-volume constraints alone. Here we show that even a minimal system of three hard squares confined in a two-dimensional periodic box exhibits nontrivial configurational behavior relevant to structure selection. As the packing fraction increases, radial distribution functions obtained from Markov-chain Monte Carlo and uniform non-overlapping insertion sampling agree at low densities, deviate markedly over an intermediate range, and converge again at higher densities. Pressure measurements provide strong numerical evidence that the discrepancy originates from the separation of the allowed configurational space into two disconnected regions above a characteristic density. We identify the separation density as $φ_{\\rm sep}=3/5$, construct explicit overlap-free transition pathways connecting the two regions immediately below it, and quantify their relative configurational-space volumes. At higher packing fractions, an approximately L-shaped arrangement of the particle centers becomes strongly favored over a staggered one, revealing a structural motif characteristic of tetratic and square-lattice ordering in larger hard-square systems. These results show that excluded-volume geometry can govern both configurational connectivity and local structure selection even in a three-particle system, revealing how signatures of many-particle self-assembly can already emerge in the few-particle limit.",
-      "published": "2026-09-09T09:27:17Z",
-      "updated": "2026-09-09T09:27:17Z",
-      "categories": [
-        "cond-mat.soft",
-        "cond-mat.stat-mech"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.09936v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09936v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.09923v1",
-      "title": "Dimensional Control of Excitonic Interactions in Exfoliated 2D Molecular Crystals",
-      "authors": [
-        "Jonghyun Son",
-        "Seonghyun Koo",
-        "Daniel Yim",
-        "Sangjin Han",
-        "Dong-Hwan Yang",
-        "Gi-Yeop Kim",
-        "Kihyun Lee",
-        "Jieun Yeon",
-        "Hye Soo Kim",
-        "Eunbeen Jeon",
-        "Minji Ko",
-        "Minhee Choe",
-        "Kenji Watanabe",
-        "Takashi Taniguchi",
-        "Hee Cheul Choi",
-        "Kwanpyo Kim",
-        "Si-Young Choi",
-        "Seogjoo J. Jang",
-        "Hyungjun Kim",
-        "Sunmin Ryu"
-      ],
-      "summary": "Two-dimensional (2D) materials provide unique opportunities to tailor excited-state properties through reduced dimensionality, altered dielectric screening and layer-dependent structural reconstruction. While such effects have been widely explored in norganic systems, their realization in molecular crystals has been limited by the difficulty of controlling thickness at the atomic scale while preserving crystalline order. Here we show that tetracene and three other molecular crystals can be mechanically exfoliated into mono-, few- or multilayer flakes, while retaining crystalline order. This capability enables new studies of molecular crystals across a well defined thickness range within the same structural organization. Thickness-dependent spectra of these samples reveal how out-of-plane confinement modifies the excited-state energy landscape of tetracene: With decreasing thickness, the Davydov splitting diminishes, the Stokes shift increases, and signatures of more delocalized excitons emerge. Electron diffraction and exciton model-based analyses correlate these trends to changes in molecular packing, intermolecular coupling and dielectric screening. Our results also demonstrate that key features of molecular excitons can be systematically tuned by layer number, extending dimensional control from inorganic 2D materials to molecular crystals.",
-      "published": "2026-09-09T09:14:28Z",
-      "updated": "2026-09-09T09:14:28Z",
-      "categories": [
-        "cond-mat.mtrl-sci"
-      ],
-      "abstractURL": "https://arxiv.org/abs/2609.09923v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09923v1",
-      "score": 0.0
-    },
-    {
-      "arxivID": "2609.09922v1",
-      "title": "Apparent Zero-Momentum Signals from Magnon--Magnon Interference in Near-Field Spin-Wave Imaging",
-      "authors": [
-        "Julien Berthomier",
-        "Romain Lebrun",
-        "Vincent Cros",
-        "Jamal Ben Youssef",
-        "Karim Bouzehouane",
-        "Abdelmadjid Anane"
-      ],
-      "summary": "Spatially resolved measurements of coherent waves are commonly read as direct maps of the underlying eigenmode spectrum. We show that this interpretation fails in near-field imaging of multimode spin-wave transport. Scanning nitrogen-vacancy magnetometry of yttrium iron garnet reveals pronounced apparent low-wave-vector signals at frequencies for which no propagating spin-wave mode exists. By tuning the probe-sample distance and modeling the anisotropic near-field response, we identify their origin as coherent mixing between directly excited Damon-Eshbach waves and defect- or transducer-scattered spin waves: the measured signal acquires spatial Fourier components at the difference wave vector $\\mathbf{k}_{\\mathrm{exc}}-\\mathbf{k}_{\\mathrm{scat}}$, which can vanish even though both constituent waves carry finite momentum. These results establish that near-field spectra of coherent excitations are interferometric field spectra rather than eigenmode maps, providing both a caution and a framework for identifying scattering processes in nanoscale magnonic devices.",
-      "published": "2026-09-09T09:14:23Z",
-      "updated": "2026-09-09T09:14:23Z",
-      "categories": [
+        "physics.app-ph",
         "cond-mat.mes-hall"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.09922v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09922v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11397v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11397v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.09874v1",
-      "title": "Quantifying cell shape and density fluctuations in epithelial tissue in vivo",
+      "arxivID": "2609.11394v1",
+      "title": "Disordered ground states in one-dimensional exactly solvable fluids",
       "authors": [
-        "Jake Turley",
-        "Helen Weavers",
-        "Paul Martin",
-        "Isaac V. Chenchiah",
-        "Tanniemola B. Liverpool"
+        "Igor Travěnec",
+        "Ladislav Šamaj"
       ],
-      "summary": "Controlling changes in cell shape are crucial for many biological processes, such as tissue development and wound healing. Tissues typically are heterogeneous with a variety of cell shapes and sizes. Of particular interest are local deviations from an average cell shape and size. These fluctuations may extend and transmit across tissues, potentially offering valuable insights into tissue characteristics such as variations in effective \"stiffness\" or rigidity. In this study, we present a theoretical framework that captures the dynamics of epithelial cell shapes within tissue, incorporating both their average behaviour and fluctuation patterns. We model cells as interacting soft ellipsoids of varying size and aspect ratio. Coarse-graining our model, we obtain a set of continuum stochastic differential equations from which we derive spatial-temporal correlation functions. These correlation functions fit with our experimental data from the developmental process of the \\textit{Drosophila} pupal wing. From the correlation functions, critical parameters representing active cell shape changes and effective tissue \"stiffness\" can be determined.",
-      "published": "2026-09-09T08:28:47Z",
-      "updated": "2026-09-09T08:28:47Z",
+      "summary": "One-dimensional fluids of classical hard-core particles of diameter $a$, interacting in pairs via a soft repulsive (monotonically decreasing) potential of finite range $\\varphi(x)=\\varepsilon \\left[ (a'-x)/(a'-a)\\right]^{1/ν}$ $(a\\le x\\le a')$ with real positive parameters $\\varepsilon$ and $ν$, are studied in an isothermal-isobaric ensemble. If $a'\\le 2a$, the pairwise interactions are reduced to nearest-neighbour interactions, which allows for an exact solution of the thermal equilibrium. We focus on the $T\\to 0$ ground states, specifically on the equation of state for the mean distance between nearest neighbours $l_0$ and the pair correlation function $g_0(x)$. If $\\varphi(x)$ is concave $(ν\\ge 1)$, there exists an ``incompressibility'' pressure $p_i=\\varepsilon/(a'-a)$ such that the ground state is an equidistant chain of particles with spacing $l_0=a'$ for $0<p<p_i$ and with spacing $l_0=a$ for $p>p_i$. If $ν>1$ (strict concavity), the ground state at $p=p_i$ is disordered with $l_0=\\left[ νa +(ν-1)a'\\right]/(2ν-1)$ and $g_0(x)$ being a superposition of weighted Dirac delta functions over discrete positions. If $ν=1$ (linear ramp), the ground state at $p=p_i$ is disordered with $l_0=(a+a')/2$ and the continuous $g_0(x)$ is a superposition of Heaviside step functions multiplied by polynomials in $x$. The isothermal susceptibility at $T=0$ is nonzero for concave $\\varphi(x)$ ($ν\\ge 1$) at $p=p_i$ and, therefore, the corresponding disordered ground states are non-hyperuniform, i.e., they resemble disordered fluids at nonzero temperatures. It turns out that pair correlation functions of disordered ground states, which occur only at a single pressure $p_i$, extend their predictive power to thermodynamic states at nonzero temperatures over a wider range of pressures around $p_i$.",
+      "published": "2026-09-10T11:29:25Z",
+      "updated": "2026-09-10T11:29:25Z",
       "categories": [
         "cond-mat.stat-mech"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.09874v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09874v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11394v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11394v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.09870v1",
-      "title": "Photo-induced Wavelength-tuning of Telecom-band Quantum Dot Nanowires Embedded in a Phase Change Material",
+      "arxivID": "2609.11367v1",
+      "title": "Orientational order on non-orientable domains",
       "authors": [
-        "Evangelos Sotiropoulos",
-        "Philippe Regreny",
-        "Matthieu Bugnet",
-        "Nicholas P. Blanchard",
-        "Sébastien Cueff",
-        "José Penuelas",
-        "Nicolas Chauvin"
+        "Gianmarco Spera",
+        "Axel Fotso Ndefo",
+        "Keaton J. Burns",
+        "Alexander Mietke"
       ],
-      "summary": "Scalable quantum-photonic technologies require spatially separated emitters to emit at the same wavelength, yet epitaxially grown quantum dots naturally exhibit emitter-to-emitter variations in their emission energies. Here, we demonstrate a contact-free post-growth tuning approach for InAs quantum dots embedded in InP nanowires using the photo-induced transformation of an amorphous Sb2S3 shell. This photoinduced effect leads to a progressive relaxation of the strain imposed on the InP core, enabling controlled spectral tuning of the quantum-dot emission. The effect is observed both at room temperature and under cryogenic conditions for quantum dots emitting in the O-band of the telecommunications spectrum. Strain-induced redshifts of approximately 7 meV at room temperature and 28 meV under cryogenic conditions are observed, respectively. The use of an amorphous chalcogenide shell therefore provides a route to achieve local wavelength tuning at the single quantum-dot-in-a-nanowire level after growth. This approach could enable spectrally matched emitters for scalable quantum-photonic architectures.",
-      "published": "2026-09-09T08:22:56Z",
-      "updated": "2026-09-09T08:22:56Z",
+      "summary": "We study the statistical properties of passive and active many-body systems with orientational degrees of freedom on non-orientable domains. By rephrasing topological constraints as non-local symmetry relations on an orientable double-cover, we show that non-orientability eliminates global rotational soft modes without acting like an external field. In a passive XY model, this results in topological caging, where orientational fluctuations that exhibit conventional diffusive behavior on a torus saturate on a Klein bottle to a finite value that we compute exactly in the thermodynamic limit. In models of active self-propelled particles with orientational degrees of freedom, topological caging persists despite continuously changing interaction neighborhoods. In an active Ising spin model, non-orientability enforces the coexistence of ordered anti-parallel domains with vanishing global polar order, a state that is absent on orientable domains.",
+      "published": "2026-09-10T11:01:42Z",
+      "updated": "2026-09-10T11:01:42Z",
       "categories": [
-        "cond-mat.mes-hall"
+        "cond-mat.stat-mech",
+        "cond-mat.soft"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.09870v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09870v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11367v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11367v1",
       "score": 0.0
     },
     {
-      "arxivID": "2609.09825v1",
-      "title": "Stable vortex soliton arrays in disclination-fractal systems",
+      "arxivID": "2609.11346v1",
+      "title": "Correlation enhanced altermagnetism mediated by spin-lattice coupling in CrSb",
       "authors": [
-        "Shuang Shen",
-        "Milivoj R. Belić",
-        "Ce Shang",
-        "Yongdong Li",
-        "Yiqi Zhang"
+        "Charmi Bhalani",
+        "Banasree Sadhukhan"
       ],
-      "summary": "Vortex light fields carry orbital angular momentum and have attracted significant attention because of their wide applications in light field manipulations, optical communications, and quantum information processing. In nonlinear media, the balance between diffraction and self-action enables the formation of vortex solitons. However, achieving the stability of vortex solitons remains challenging due to radial and azimuthal modulation instabilities. Here, we report stable vortex solitons and vortex-soliton arrays in disclination-fractal configurations with different rotational symmetries, constructed by applying disclination operations to fractal lattice structures. The stable vortex-soliton arrays---composed of several vortex solitons---can exist along domain walls, resulting from the disclination operation applied to the topologically trivial phase. Their stability is verified through both linear stability analysis and direct simulations of perturbed propagation. For comparison, vortex-soliton arrays in conventional disclination configurations are found to be completely unstable, demonstrating the significance of the fractal configuration in stabilizing these nonlinear states. These findings reveal a new nonlinear excitation mechanism arising from the interplay between fractal geometry and disclination defects, thereby providing theoretical underpinnings for both the improved understanding of multi-field excitation phenomena in complex geometric systems and opening new avenues for the design of photonic devices based on fractal disclination structures.",
-      "published": "2026-09-09T07:28:27Z",
-      "updated": "2026-09-09T07:28:27Z",
+      "summary": "Altermagnets (AMs) exhibit momentum-dependent spin splitting without net magnetization, making them promising platforms for spintronic applications. While the symmetry and multipolar origins of nonrelativistic altermagnetic spin splitting (NRASS) are well established, the role of electronic correlations and spin-lattice coupling (SLC) in controlling NRASS remain unexplored. In particular, SLC provides a direct pathway for tuning altermagnetism through lattice degrees of freedom. Here we first investigate the role of electronic correlations on altermagnetic strength in NiAs-type material CrSb using density functional theory (DFT), DFT+$U$, and dynamical mean-field theory (DMFT). We find that increasing electronic correlations substantially enhance NRASS and drive the stabilization of an incommensurate spin-spiral (SS) state, while dynamical correlations further amplify the spin splitting through quasiparticle renormalization of the Cr-$3d$ states. We find that the NRASS remains 12.5\\% larger in DFT+DMFT than in DFT. By evaluating SLC in next step, we establish its direct connection to the evolution of NRASS and identify SLC as a microscopic descriptor between electronic correlation and enhanced altermagnetism in CrSb. Investigating it in another NiAs-type compound MnTe, we show that the SLC-NRASS correlation is generic across AMs and establish SLC as a microscopic descriptor of altermagnetic strength. Our results provide a unified framework for tuning altermagnetism through the interplay between the electronic correlations and lattice degrees of freedom.",
+      "published": "2026-09-10T10:25:44Z",
+      "updated": "2026-09-10T10:25:44Z",
       "categories": [
-        "physics.optics",
-        "nlin.PS"
+        "cond-mat.mtrl-sci"
       ],
-      "abstractURL": "https://arxiv.org/abs/2609.09825v1",
-      "pdfURL": "https://arxiv.org/pdf/2609.09825v1",
+      "abstractURL": "https://arxiv.org/abs/2609.11346v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11346v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11340v1",
+      "title": "Information-Theoretic Characterization of Macroscopic Chaos Emerging from the Chemical Master Equation",
+      "authors": [
+        "Kenshin Matsumoto",
+        "Shin-ichi Sasa"
+      ],
+      "summary": "Open chemical reaction networks exhibit stochastic concentration dynamics at finite system sizes, whereas their macroscopic limit is governed by deterministic rate equations that can display chaos. In this Letter, we show theoretically that a rate of information loss constructed from two-time mutual information recovers the Kolmogorov-Sinai entropy in the deterministic limit. We verify this result through numerical simulations of a Markov jump process for a three-species system involving seven reactions.",
+      "published": "2026-09-10T10:18:30Z",
+      "updated": "2026-09-10T10:18:30Z",
+      "categories": [
+        "cond-mat.stat-mech"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11340v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11340v1",
+      "score": 0.0
+    },
+    {
+      "arxivID": "2609.11336v1",
+      "title": "Universal sampling of spin systems across quenched disorder",
+      "authors": [
+        "Jing Liu",
+        "Yeyuan Wu",
+        "Ying Tang",
+        "Pan Zhang"
+      ],
+      "summary": "Statistical physics extracts macroscopic laws by averaging over the many microscopic degrees of freedom of a system. Disordered systems demand a second and far harder average, one over the quenched randomness itself. The classic analytical routes, the replica and cavity methods, become uncontrolled outside mean-field or tree-like limits, and conventional numerical algorithms like parallel tempering require expensive, independent equilibration for every disorder realization. In this work, we introduce a universal neural variational framework that amortizes inference across the disorder ensemble, eliminating both the need for per-instance Markov chain equilibration and the cost of retraining instance-specific variational ansatzes. Built on an encoder-decoder Transformer architecture, after training once, it produces an explicit approximation to the Boltzmann distribution given previously unseen disorder realizations without further optimization. We validate this framework on 2D Edwards-Anderson models, and apply it to the random-bond Ising model, successfully capturing the Binder cumulant crossings near the Nishimori multicritical point. These results shift the object of variational inference from the single instance to the disorder ensemble, opening a route to frustrated many-body systems where instance-by-instance computation is prohibitive.",
+      "published": "2026-09-10T10:13:09Z",
+      "updated": "2026-09-10T10:13:09Z",
+      "categories": [
+        "cond-mat.stat-mech",
+        "cond-mat.dis-nn"
+      ],
+      "abstractURL": "https://arxiv.org/abs/2609.11336v1",
+      "pdfURL": "https://arxiv.org/pdf/2609.11336v1",
       "score": 0.0
     }
   ]
